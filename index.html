@@ -7,274 +7,209 @@
 <meta name="description" content="Noor Creative Marketing — إدارة صفحات السوشال ميديا، تصميم المحتوى والهوية البصرية، حملات إعلانات ميتا، الفيديو والريلز، وتحسين محركات البحث. عمّان، الأردن.">
 <meta property="og:title" content="Noor Creative Marketing">
 <meta property="og:description" content="تسويق رقمي يحوّل المتابعين إلى عملاء — إدارة صفحات، تصميم، إعلانات ممولة وريلز.">
+<meta property="og:image" content="images/logo.png">
+<link rel="icon" href="images/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Tajawal:wght@500;700;800;900&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Tajawal:wght@500;700;800;900&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --cream:#FBF6EC;
-  --cream-2:#F3EAD8;
-  --lavender:#B9A6E0;
-  --lavender-deep:#7A5FB8;
-  --plum:#4B3578;
-  --olive:#6F7F3A;
-  --olive-deep:#4D5A24;
-  --sage:#A9B784;
-  --red:#C8463D;
-  --charcoal:#24212B;
-  --muted:#5E5868;
-  --radius:22px;
-  --shadow:0 18px 40px -18px rgba(75,53,120,.35);
+  --ivory:#FAF7F0;
+  --sand:#F1EBDE;
+  --line:#E3DCCB;
+  --ink:#2E2A26;
+  --ink-2:#4A453F;
+  --muted:#6B655C;
+  --sage:#8FA06E;
+  --sage-deep:#5E6E45;
+  --sage-soft:#E6EBDB;
+  --accent:#7E6BB0;
+  --radius:18px;
+  --shadow:0 20px 44px -26px rgba(46,42,38,.45);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{
-  background:var(--cream);
-  color:var(--charcoal);
-  font-family:"Tajawal",system-ui,sans-serif;
-  font-size:19px;
-  line-height:1.75;
-  overflow-x:hidden;
+  background:var(--ivory);color:var(--ink);
+  font-family:"Tajawal",system-ui,sans-serif;font-size:19px;line-height:1.75;overflow-x:hidden;
 }
-html[lang="en"] body{font-family:"Outfit",system-ui,sans-serif;font-size:18px}
+html[lang="en"] body{font-family:"Jost",system-ui,sans-serif;font-size:18px}
 html[lang="ar"] .en,html[lang="en"] .ar{display:none!important}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
-.wrap{width:min(1120px,100% - 32px);margin-inline:auto}
+.wrap{width:min(1140px,100% - 32px);margin-inline:auto}
+svg.ic{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 
-/* ---------- Header ---------- */
-header{
-  position:sticky;top:0;z-index:50;
-  background:rgba(251,246,236,.88);
-  backdrop-filter:blur(10px);
-  border-bottom:1px solid rgba(75,53,120,.08);
-}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
-.logo{display:flex;flex-direction:column;line-height:1;direction:ltr}
-.logo-word{
-  font-family:"Fraunces",serif;font-weight:800;font-size:30px;letter-spacing:.06em;color:var(--plum);
-  display:flex;align-items:center;gap:2px;
-}
-.logo-word svg{width:20px;height:20px;margin-inline-start:2px;transform:translateY(-8px)}
-.logo-sub{font-family:"Outfit",sans-serif;font-size:10.5px;font-weight:700;letter-spacing:.32em;color:var(--olive-deep);text-transform:uppercase;margin-top:4px}
-.nav-links{display:flex;gap:26px;font-weight:700;font-size:17px}
+/* Header */
+header{position:sticky;top:0;z-index:50;background:rgba(250,247,240,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 0}
+.logo img{height:52px;width:auto}
+.nav-links{display:flex;gap:30px;font-weight:700;font-size:17px;color:var(--ink-2)}
 .nav-links a{position:relative;padding:4px 0}
-.nav-links a::after{content:"";position:absolute;inset-inline:0;bottom:-2px;height:3px;border-radius:3px;background:var(--lavender);transform:scaleX(0);transition:.25s}
+.nav-links a::after{content:"";position:absolute;inset-inline:0;bottom:-3px;height:2px;background:var(--sage);transform:scaleX(0);transition:.25s}
 .nav-links a:hover::after{transform:scaleX(1)}
 .nav-actions{display:flex;align-items:center;gap:10px}
-.lang-btn{
-  border:2px solid var(--plum);background:transparent;color:var(--plum);
-  font:800 15px "Outfit",sans-serif;padding:7px 14px;border-radius:999px;cursor:pointer;
-}
-.lang-btn:hover{background:var(--plum);color:var(--cream)}
+.lang-btn{border:1.5px solid var(--ink);background:transparent;color:var(--ink);font:600 14px "Jost",sans-serif;letter-spacing:.06em;padding:7px 14px;border-radius:999px;cursor:pointer}
+.lang-btn:hover{background:var(--ink);color:var(--ivory)}
 .burger{display:none;background:none;border:0;cursor:pointer;padding:6px}
-.burger span{display:block;width:26px;height:3px;border-radius:3px;background:var(--plum);margin:5px 0}
+.burger span{display:block;width:24px;height:2px;background:var(--ink);margin:6px 0}
 
-/* ---------- Buttons ---------- */
-.btn{
-  display:inline-flex;align-items:center;gap:10px;
-  font-weight:800;font-size:18px;padding:15px 28px;border-radius:999px;
-  transition:transform .2s, box-shadow .2s;
-}
-.btn:hover{transform:translateY(-3px)}
-.btn-primary{background:var(--olive);color:#fff;box-shadow:0 12px 26px -12px rgba(77,90,36,.8)}
-.btn-ghost{border:2.5px solid var(--plum);color:var(--plum)}
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:800;font-size:18px;padding:15px 30px;border-radius:999px;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--ink);color:var(--ivory)}
+.btn-primary:hover{background:var(--sage-deep)}
+.btn-ghost{border:1.5px solid var(--ink);color:var(--ink)}
 .btn svg{width:22px;height:22px;flex:none}
 
-/* ---------- Hero ---------- */
-.hero{position:relative;padding:64px 0 90px;overflow:hidden}
-.hero::before{
-  content:"";position:absolute;width:620px;height:620px;border-radius:50%;
-  background:radial-gradient(circle,rgba(185,166,224,.55),transparent 65%);
-  inset-inline-end:-180px;top:-160px;z-index:-1;
-}
-.hero::after{
-  content:"";position:absolute;width:420px;height:420px;border-radius:50%;
-  background:radial-gradient(circle,rgba(169,183,132,.45),transparent 65%);
-  inset-inline-start:-160px;bottom:-160px;z-index:-1;
-}
-.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
-.eyebrow{
-  display:inline-flex;align-items:center;gap:8px;
-  background:#fff;border:1.5px solid rgba(75,53,120,.15);
-  padding:6px 16px;border-radius:999px;font-weight:800;font-size:15px;color:var(--plum);
-}
-.eyebrow .dot{width:9px;height:9px;border-radius:50%;background:var(--red)}
-h1{
-  font-size:clamp(40px,6.2vw,72px);line-height:1.15;font-weight:900;margin:22px 0 18px;color:var(--charcoal);
-}
-html[lang="en"] h1{font-family:"Fraunces",serif;font-weight:800;letter-spacing:-.01em}
-h1 .hl{color:var(--lavender-deep);position:relative;white-space:nowrap}
-h1 .hl::after{
-  content:"";position:absolute;inset-inline:0;bottom:.06em;height:.22em;background:var(--sage);opacity:.55;z-index:-1;border-radius:6px;
-}
-.lead{font-size:clamp(19px,2.2vw,23px);color:var(--muted);font-weight:500;max-width:34ch}
-.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+/* Hero */
+.hero{position:relative;padding:72px 0 96px;overflow:hidden}
+.hero-leaf{position:absolute;inset-inline-start:-60px;bottom:-40px;width:340px;opacity:.10;z-index:-1;pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-weight:800;font-size:15px;color:var(--sage-deep);letter-spacing:.04em}
+.eyebrow::before{content:"";width:34px;height:2px;background:var(--sage)}
+h1{font-size:clamp(40px,6vw,68px);line-height:1.18;font-weight:900;margin:18px 0 20px}
+html[lang="en"] h1{font-family:"Cormorant Garamond",serif;font-weight:700;letter-spacing:-.005em;line-height:1.08}
+h1 em{font-style:normal;color:var(--sage-deep)}
+.lead{font-size:clamp(19px,2.1vw,22px);color:var(--muted);font-weight:500;max-width:36ch}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
 
-.avatar-stage{position:relative;justify-self:center;width:min(380px,82vw);aspect-ratio:1}
-.avatar-ring{
-  position:absolute;inset:0;border-radius:50%;
-  background:conic-gradient(from 210deg,var(--lavender),var(--sage),var(--cream-2),var(--lavender));
-  padding:12px;box-shadow:var(--shadow);
-}
-.avatar-inner{
-  width:100%;height:100%;border-radius:50%;background:var(--cream);
-  display:grid;place-items:center;overflow:hidden;position:relative;
-}
-.avatar-inner img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
-.avatar-ph{text-align:center;color:var(--plum)}
-.avatar-ph b{display:block;font-family:"Fraunces",serif;font-size:96px;line-height:1}
-.avatar-ph small{font-weight:700;font-size:14px;color:var(--muted)}
-.badge{
-  position:absolute;background:#fff;border-radius:16px;padding:10px 14px;box-shadow:var(--shadow);
-  font-weight:800;font-size:14px;display:flex;align-items:center;gap:8px;white-space:nowrap;
-  animation:float 5s ease-in-out infinite;
-}
-.badge i{font-style:normal;font-size:20px}
-.badge.b1{top:6%;inset-inline-start:-8%}
-.badge.b2{bottom:10%;inset-inline-end:-10%;animation-delay:-2.5s}
-@keyframes float{50%{transform:translateY(-10px)}}
+.offer{background:#fff;border:1px solid var(--line);border-radius:26px;padding:34px 32px;box-shadow:var(--shadow);position:relative}
+.offer::before{content:"";position:absolute;inset-inline-end:28px;top:-1px;width:64px;height:4px;border-radius:0 0 4px 4px;background:var(--sage)}
+.offer-tag{font-weight:800;font-size:14px;color:var(--sage-deep);letter-spacing:.06em}
+.offer h3{font-size:25px;font-weight:900;margin:6px 0 18px;line-height:1.35}
+html[lang="en"] .offer h3{font-family:"Cormorant Garamond",serif;font-size:30px;font-weight:700}
+.offer ul{list-style:none;display:grid;gap:12px}
+.offer li{display:flex;gap:12px;align-items:flex-start;font-weight:600;color:var(--ink-2);font-size:17.5px}
+.offer li svg{width:22px;height:22px;flex:none;margin-top:4px;color:var(--sage-deep)}
+.offer .rule{height:1px;background:var(--line);margin:22px 0 16px}
+.offer small{color:var(--muted);font-weight:600;font-size:15px}
 
-/* ---------- Sections ---------- */
-section{padding:84px 0}
-.sec-head{text-align:center;max-width:680px;margin:0 auto 48px}
-.sec-tag{font-weight:800;font-size:15px;color:var(--red);letter-spacing:.06em}
-h2{font-size:clamp(32px,4.4vw,48px);font-weight:900;line-height:1.25;margin:8px 0 12px}
-html[lang="en"] h2{font-family:"Fraunces",serif;font-weight:800}
+/* Sections */
+section{padding:88px 0}
+.sec-head{max-width:700px;margin:0 auto 52px;text-align:center}
+.sec-tag{font-weight:800;font-size:14px;color:var(--sage-deep);letter-spacing:.12em}
+h2{font-size:clamp(32px,4.2vw,46px);font-weight:900;line-height:1.28;margin:8px 0 12px}
+html[lang="en"] h2{font-family:"Cormorant Garamond",serif;font-weight:700;font-size:clamp(36px,4.8vw,54px);line-height:1.1}
 .sec-head p{color:var(--muted);font-size:20px;font-weight:500}
 
-/* services */
-.services{background:#fff;border-radius:40px;margin-inline:16px}
-.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.svc{
-  background:var(--cream);border-radius:var(--radius);padding:30px 26px;position:relative;overflow:hidden;
-  border:1.5px solid transparent;transition:.25s;
-}
-.svc:hover{border-color:var(--lavender);transform:translateY(-4px);box-shadow:var(--shadow)}
-.svc-ic{
-  width:60px;height:60px;border-radius:18px;display:grid;place-items:center;font-size:28px;margin-bottom:16px;
-}
-.svc:nth-child(3n+1) .svc-ic{background:#EDE6F8}
-.svc:nth-child(3n+2) .svc-ic{background:#E8EDD9}
-.svc:nth-child(3n) .svc-ic{background:#F7E1DE}
-.svc h3{font-size:23px;font-weight:900;margin-bottom:6px}
-.svc p{color:var(--muted);font-size:17.5px;font-weight:500}
+/* Services */
+.services{background:#fff;border-block:1px solid var(--line)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:24px;overflow:hidden}
+.svc{padding:34px 30px;border-inline-end:1px solid var(--line);border-bottom:1px solid var(--line);transition:background .25s}
+.svc:nth-child(3n){border-inline-end:0}
+.svc:nth-last-child(-n+3){border-bottom:0}
+.svc:hover{background:var(--ivory)}
+.svc-ic{width:54px;height:54px;border-radius:14px;display:grid;place-items:center;background:var(--sage-soft);color:var(--sage-deep);margin-bottom:18px}
+.svc h3{font-size:22px;font-weight:900;margin-bottom:6px}
+.svc p{color:var(--muted);font-size:17px;font-weight:500}
 
-/* portfolio */
-.pf-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
-.pf{background:#fff;border-radius:28px;overflow:hidden;box-shadow:0 10px 30px -20px rgba(36,33,43,.4);display:flex;flex-direction:column}
+/* Portfolio */
+.pf-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+.pf{background:#fff;border:1px solid var(--line);border-radius:24px;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
+.pf:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
 .pf-media{aspect-ratio:16/10;position:relative;display:grid;place-items:center;overflow:hidden}
 .pf-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
-.pf-media .ph{text-align:center;color:#fff;font-weight:800}
-.pf-media .ph span{display:block;font-size:54px;line-height:1.1}
-.pf-media .ph small{opacity:.85;font-size:14px}
-.m-awj{background:linear-gradient(135deg,#4B3578,#7A5FB8)}
-.m-sns{background:linear-gradient(135deg,#4D5A24,#8A9A50)}
-.m-wed{background:linear-gradient(135deg,#C8463D,#E39A7F)}
-.m-brand{background:linear-gradient(135deg,#24212B,#5E5868)}
-.pf-body{padding:24px 26px 28px;display:flex;flex-direction:column;gap:10px;flex:1}
-.pf-body h3{font-size:25px;font-weight:900}
-.pf-body p{color:var(--muted);font-size:17.5px;font-weight:500}
+.pf-media .mono{font-family:"Cormorant Garamond",serif;font-weight:700;font-size:64px;color:rgba(255,255,255,.92);letter-spacing:.02em}
+.pf-media .mono.ar-f{font-family:"Tajawal",sans-serif;font-weight:900;font-size:58px}
+.m1{background:linear-gradient(135deg,#2E2A26,#5A5248)}
+.m2{background:linear-gradient(135deg,#5E6E45,#8FA06E)}
+.m3{background:linear-gradient(135deg,#B9A894,#E1D5C2)}
+.m4{background:linear-gradient(135deg,#4A453F,#8FA06E)}
+.pf-body{padding:26px 28px 28px;display:flex;flex-direction:column;gap:10px;flex:1}
+.pf-body h3{font-size:24px;font-weight:900}
+.pf-body p{color:var(--muted);font-size:17px;font-weight:500}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip{background:var(--cream);border-radius:999px;padding:4px 12px;font-size:14px;font-weight:800;color:var(--plum)}
-.pf-links{display:flex;gap:10px;margin-top:auto;padding-top:8px}
-.pf-links a{
-  display:inline-flex;align-items:center;gap:6px;font-weight:800;font-size:15px;
-  border:2px solid var(--cream-2);padding:7px 14px;border-radius:999px;transition:.2s;
-}
-.pf-links a:hover{border-color:var(--plum);color:var(--plum)}
-.pf-links svg{width:18px;height:18px}
+.chip{border:1px solid var(--line);border-radius:999px;padding:3px 12px;font-size:14px;font-weight:700;color:var(--ink-2)}
+.pf-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto;padding-top:10px}
+.pf-links a{display:inline-flex;align-items:center;gap:7px;font-weight:700;font-size:15px;background:var(--ivory);border:1px solid var(--line);padding:7px 15px;border-radius:999px;transition:.2s}
+.pf-links a:hover{background:var(--ink);color:var(--ivory);border-color:var(--ink)}
+.pf-links svg{width:17px;height:17px}
 
-/* steps */
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:s}
-.step{position:relative;padding:28px 22px;border-radius:var(--radius);background:linear-gradient(180deg,#fff,var(--cream))}
-.step::before{
-  counter-increment:s;content:counter(s);
-  font-family:"Fraunces",serif;font-weight:800;font-size:54px;line-height:1;color:var(--lavender);display:block;margin-bottom:10px;
-}
+/* Process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:s;border-top:1px solid var(--line)}
+.step{padding:30px 24px 10px;position:relative}
+.step::before{counter-increment:s;content:"0" counter(s);font-family:"Cormorant Garamond",serif;font-weight:700;font-size:46px;line-height:1;color:var(--sage);display:block;margin-bottom:12px}
+.step::after{content:"";position:absolute;top:-4px;inset-inline-start:24px;width:8px;height:8px;border-radius:50%;background:var(--sage-deep)}
 .step h3{font-size:21px;font-weight:900;margin-bottom:4px}
 .step p{color:var(--muted);font-size:16.5px;font-weight:500}
 
 /* CTA */
-.cta{
-  background:var(--plum);color:var(--cream);border-radius:40px;padding:64px 32px;text-align:center;position:relative;overflow:hidden;
-}
-.cta::before,.cta::after{content:"";position:absolute;border-radius:50%}
-.cta::before{width:300px;height:300px;background:rgba(169,183,132,.25);inset-inline-start:-90px;top:-110px}
-.cta::after{width:220px;height:220px;background:rgba(200,70,61,.25);inset-inline-end:-60px;bottom:-90px}
+.cta{background:var(--ink);color:var(--ivory);border-radius:32px;padding:68px 32px;text-align:center;position:relative;overflow:hidden}
+.cta-leaf{position:absolute;width:220px;inset-inline-end:-40px;top:-30px;opacity:.16}
 .cta h2{color:#fff;position:relative}
-.cta p{font-size:21px;opacity:.88;margin:6px auto 28px;max-width:40ch;position:relative}
-.cta .btn{position:relative;background:var(--sage);color:var(--charcoal)}
+.cta p{font-size:21px;opacity:.82;margin:6px auto 30px;max-width:40ch;position:relative}
+.cta .btn{position:relative;background:var(--sage);color:var(--ink)}
+.cta .btn:hover{background:#fff}
 
-/* footer */
-footer{padding:48px 0 36px;text-align:center}
-.socials{display:flex;justify-content:center;gap:14px;margin:18px 0}
-.socials a{
-  width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:#fff;
-  box-shadow:0 8px 20px -12px rgba(75,53,120,.6);transition:.2s;color:var(--plum);
-}
-.socials a:hover{background:var(--plum);color:#fff;transform:translateY(-3px)}
-.socials svg{width:24px;height:24px}
+/* Footer */
+footer{padding:56px 0 40px;text-align:center}
+footer .f-logo{height:84px;width:auto;margin:0 auto 18px}
+.socials{display:flex;justify-content:center;gap:12px;margin:14px 0 20px}
+.socials a{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line);background:#fff;color:var(--ink);transition:.2s}
+.socials a:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.socials svg{width:21px;height:21px}
+footer .follow{font-weight:800;font-size:18px;color:var(--ink-2)}
 footer small{color:var(--muted);font-weight:600}
-footer .follow{font-weight:900;font-size:22px}
 
-/* floating whatsapp */
-.wa-float{
-  position:fixed;bottom:20px;inset-inline-end:20px;z-index:60;width:62px;height:62px;border-radius:50%;
-  background:#25D366;color:#fff;display:grid;place-items:center;box-shadow:0 12px 26px -8px rgba(37,211,102,.7);
-}
-.wa-float svg{width:32px;height:32px}
+.wa-float{position:fixed;bottom:20px;inset-inline-end:20px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;box-shadow:0 12px 24px -10px rgba(0,0,0,.45)}
+.wa-float svg{width:30px;height:30px}
 
-/* reveal */
-.rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease, transform .7s ease}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
 .rv.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}.badge{animation:none}}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}}
 
-/* ---------- Responsive ---------- */
-@media (max-width:900px){
-  .hero-grid{grid-template-columns:1fr;text-align:center}
-  .lead{margin-inline:auto}
-  .hero-cta{justify-content:center}
-  .avatar-stage{order:-1;width:min(300px,72vw)}
+@media (max-width:920px){
+  .hero-grid{grid-template-columns:1fr;gap:40px}
   .svc-grid{grid-template-columns:1fr 1fr}
+  .svc:nth-child(3n){border-inline-end:1px solid var(--line)}
+  .svc:nth-child(2n){border-inline-end:0}
+  .svc:nth-last-child(-n+3){border-bottom:1px solid var(--line)}
+  .svc:nth-last-child(-n+2){border-bottom:0}
   .steps{grid-template-columns:1fr 1fr}
 }
 @media (max-width:760px){
-  .nav-links{
-    position:absolute;top:100%;inset-inline:0;flex-direction:column;gap:0;background:var(--cream);
-    border-bottom:1px solid rgba(75,53,120,.1);display:none;padding:8px 16px 16px;
-  }
+  .nav-links{position:absolute;top:100%;inset-inline:0;flex-direction:column;gap:0;background:var(--ivory);border-bottom:1px solid var(--line);display:none;padding:6px 16px 16px}
   .nav-links.open{display:flex}
   .nav-links a{padding:12px 4px;font-size:19px}
   .burger{display:block}
+  .logo img{height:50px}
   .pf-grid{grid-template-columns:1fr}
   section{padding:64px 0}
-  .services{margin-inline:8px;border-radius:28px}
-  .badge.b1{inset-inline-start:-4%}
-  .badge.b2{inset-inline-end:-4%}
+  .hero{padding:48px 0 64px}
 }
 @media (max-width:540px){
   body{font-size:18px}
-  .svc-grid,.steps{grid-template-columns:1fr}
-  .btn{width:100%;justify-content:center}
-  .cta{padding:48px 22px;border-radius:28px}
+  .svc-grid{grid-template-columns:1fr}
+  .svc{border-inline-end:0!important;border-bottom:1px solid var(--line)!important}
+  .svc:last-child{border-bottom:0!important}
+  .steps{grid-template-columns:1fr}
+  .btn{width:100%}
+  .offer{padding:28px 22px}
+  .cta{padding:50px 22px;border-radius:24px}
 }
 </style>
 </head>
 <body>
 
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.3-.5 0-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.1.3.7 1.1 1.4 1.8 1 .9 1.8 1.2 2.1 1.3.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.1Z"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></g></symbol>
+    <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M14 8h3V4h-3c-2.8 0-4.5 1.8-4.5 4.6V11H7v4h2.5v7h4v-7H17l.5-4h-4V9c0-.6.4-1 1-1Z"/></symbol>
+    <symbol id="i-yt" viewBox="0 0 24 24"><path fill="currentColor" d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8ZM9.8 15V9l5.2 3-5.2 3Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"/><path d="m8 12.5 2.7 2.7L16.5 9"/></g></symbol>
+    <symbol id="leaf" viewBox="0 0 120 140"><g fill="#8FA06E"><path d="M60 140c0-40 4-70 22-96" stroke="#8FA06E" stroke-width="4" fill="none"/><path d="M66 70C40 66 26 48 22 24c26 4 42 22 44 46Z"/><path d="M74 54c4-26 20-44 46-50-2 26-18 44-46 50Z"/><path d="M70 92c20-18 40-24 50-20-10 18-28 26-50 20Z"/></g></symbol>
+  </defs>
+</svg>
+
 <header>
   <div class="wrap nav">
-    <a href="#top" class="logo" aria-label="Noor Creative Marketing">
-      <span class="logo-word">NOOR
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20C4 10 10 4 21 3c0 11-6 17-15 17" fill="#6F7F3A"/><path d="M4 20 15 9" stroke="#FBF6EC" stroke-width="1.6" stroke-linecap="round"/></svg>
-      </span>
-      <span class="logo-sub">Creative Marketing</span>
-    </a>
+    <a href="#top" class="logo" aria-label="Noor Creative Marketing"><img src="images/logo.png" alt="Noor Creative Marketing"></a>
     <nav class="nav-links" id="navLinks">
       <a href="#services"><span class="ar">خدماتنا</span><span class="en">Services</span></a>
-      <a href="#work"><span class="ar">أعمالنا</span><span class="en">Our Work</span></a>
-      <a href="#process"><span class="ar">كيف نعمل</span><span class="en">Process</span></a>
+      <a href="#work"><span class="ar">أعمالنا</span><span class="en">Work</span></a>
+      <a href="#process"><span class="ar">آلية العمل</span><span class="en">Process</span></a>
       <a href="#contact"><span class="ar">تواصلوا معنا</span><span class="en">Contact</span></a>
     </nav>
     <div class="nav-actions">
@@ -285,107 +220,94 @@ footer .follow{font-weight:900;font-size:22px}
 </header>
 
 <main id="top">
-  <!-- HERO -->
   <section class="hero">
+    <svg class="hero-leaf"><use href="#leaf"/></svg>
     <div class="wrap hero-grid">
       <div>
-        <span class="eyebrow"><span class="dot"></span>
-          <span class="ar">تسويق رقمي من عمّان</span><span class="en">Digital marketing from Amman</span>
-        </span>
+        <span class="eyebrow"><span class="ar">وكالة تسويق رقمي · عمّان</span><span class="en">Digital marketing studio · Amman</span></span>
         <h1>
-          <span class="ar">نحوّل صفحتكم إلى <span class="hl">مصدر عملاء</span></span>
-          <span class="en">We turn your page into a <span class="hl">client magnet</span></span>
+          <span class="ar">حضور رقمي يحوّل المتابعين إلى <em>عملاء</em></span>
+          <span class="en">A digital presence that turns followers into <em>clients</em></span>
         </h1>
         <p class="lead">
-          <span class="ar">إدارة صفحات، تصميم، ريلز وإعلانات ممولة بلمسة إبداعية تجذب الانتباه وتحقق نتائج حقيقية.</span>
-          <span class="en">Page management, design, reels and paid ads — with a creative touch that grabs attention and drives real results.</span>
+          <span class="ar">نخطط وندير صفحاتكم، نصمم هويتكم ومحتواكم، ونطلق حملات إعلانية مدروسة تحقق نتائج قابلة للقياس.</span>
+          <span class="en">We plan and run your pages, design your identity and content, and launch focused ad campaigns with measurable results.</span>
         </p>
         <div class="hero-cta">
-          <a class="btn btn-primary wa-link" href="#" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.3-.5 0-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.1.3.7 1.1 1.4 1.8 1 .9 1.8 1.2 2.1 1.3.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.1Z"/></svg>
-            <span class="ar">احجزوا استشارة مجانية</span><span class="en">Book a free consultation</span>
-          </a>
-          <a class="btn btn-ghost" href="#work"><span class="ar">شاهدوا أعمالنا</span><span class="en">See our work</span></a>
+          <a class="btn btn-primary wa-link" href="#" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg><span class="ar">احجزوا استشارة مجانية</span><span class="en">Book a free consultation</span></a>
+          <a class="btn btn-ghost" href="#work"><span class="ar">أعمالنا</span><span class="en">View our work</span></a>
         </div>
       </div>
 
-      <div class="avatar-stage">
-        <div class="avatar-ring">
-          <div class="avatar-inner">
-            <!-- AVATAR: put avatar.png in the images folder and it will appear here -->
-            <img src="images/avatar.png" alt="Noor" onerror="this.remove()">
-            <div class="avatar-ph"><b>N</b><small class="ar">صورة الأفاتار قريباً</small><small class="en">Avatar coming soon</small></div>
-          </div>
-        </div>
-        <div class="badge b1"><i>📈</i><span class="ar">إعلانات ميتا</span><span class="en">Meta Ads</span></div>
-        <div class="badge b2"><i>🎬</i><span class="ar">ريلز تنتشر</span><span class="en">Reels that travel</span></div>
-      </div>
+      <aside class="offer rv">
+        <div class="offer-tag ar">إدارة متكاملة</div><div class="offer-tag en">FULL-SERVICE MANAGEMENT</div>
+        <h3><span class="ar">كل ما تحتاجه علامتكم في مكان واحد</span><span class="en">Everything your brand needs, in one place</span></h3>
+        <ul>
+          <li><svg><use href="#i-check"/></svg><span class="ar">خطة محتوى شهرية واضحة</span><span class="en">A clear monthly content plan</span></li>
+          <li><svg><use href="#i-check"/></svg><span class="ar">تصاميم احترافية بهوية موحّدة</span><span class="en">Professional, on-brand designs</span></li>
+          <li><svg><use href="#i-check"/></svg><span class="ar">ريلز وفيديوهات قصيرة</span><span class="en">Reels and short-form video</span></li>
+          <li><svg><use href="#i-check"/></svg><span class="ar">إعلانات ممولة على فيسبوك وإنستغرام</span><span class="en">Paid Facebook &amp; Instagram ads</span></li>
+          <li><svg><use href="#i-check"/></svg><span class="ar">متابعة النتائج وتقارير دورية</span><span class="en">Performance tracking and reports</span></li>
+        </ul>
+        <div class="rule"></div>
+        <small><span class="ar">باقات مرنة حسب احتياج مشروعكم.</span><span class="en">Flexible packages tailored to your business.</span></small>
+      </aside>
     </div>
   </section>
 
-  <!-- SERVICES -->
   <section class="services" id="services">
     <div class="wrap">
       <div class="sec-head rv">
-        <span class="sec-tag ar">خدماتنا</span><span class="sec-tag en">WHAT WE DO</span>
-        <h2><span class="ar">كل ما تحتاجه علامتكم للظهور بقوة</span><span class="en">Everything your brand needs to stand out</span></h2>
-        <p><span class="ar">من الفكرة إلى التصميم إلى الإعلان، فريق واحد ونَفَس إبداعي واحد.</span><span class="en">From idea to design to ads — one team, one creative voice.</span></p>
+        <div class="sec-tag ar">خدماتنا</div><div class="sec-tag en">SERVICES</div>
+        <h2><span class="ar">خدمات تسويقية متكاملة</span><span class="en">Integrated marketing services</span></h2>
+        <p><span class="ar">من الفكرة إلى التصميم إلى الإعلان، بأسلوب واحد ومتّسق.</span><span class="en">From idea to design to advertising — one consistent voice.</span></p>
       </div>
-      <div class="svc-grid">
-        <div class="svc rv"><div class="svc-ic">📱</div>
+      <div class="svc-grid rv">
+        <div class="svc"><div class="svc-ic"><svg class="ic" viewBox="0 0 24 24"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10 18.5h4"/></svg></div>
           <h3><span class="ar">إدارة صفحات السوشال ميديا</span><span class="en">Social Media Management</span></h3>
-          <p><span class="ar">خطة محتوى شهرية، نشر منتظم، ومتابعة التفاعل والرسائل.</span><span class="en">Monthly content plans, consistent posting, and community management.</span></p></div>
-        <div class="svc rv"><div class="svc-ic">🎨</div>
-          <h3><span class="ar">تصميم المنشورات والهوية البصرية</span><span class="en">Post Design &amp; Visual Identity</span></h3>
-          <p><span class="ar">لوغو، ألوان، وقوالب تصميم تجعل علامتكم مميزة من أول نظرة.</span><span class="en">Logos, palettes and templates that make your brand recognisable at a glance.</span></p></div>
-        <div class="svc rv"><div class="svc-ic">🎯</div>
+          <p><span class="ar">نشر منتظم، إدارة التفاعل والرسائل، وبناء مجتمع حول علامتكم.</span><span class="en">Consistent posting, community and inbox management.</span></p></div>
+        <div class="svc"><div class="svc-ic"><svg class="ic" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18c1 0 1.5-.8 1.5-1.5 0-1.2-1-1.3-1-2.5 0-.8.7-1.5 1.5-1.5H16a5 5 0 0 0 5-5c0-4-4-7.5-9-7.5Z"/><circle cx="7.5" cy="11" r="1"/><circle cx="10" cy="7" r="1"/><circle cx="15" cy="7.5" r="1"/></svg></div>
+          <h3><span class="ar">تصميم المنشورات والهوية البصرية</span><span class="en">Design &amp; Visual Identity</span></h3>
+          <p><span class="ar">لوغو، ألوان وقوالب تجعل علامتكم مميزة من أول نظرة.</span><span class="en">Logos, palettes and templates that make you recognisable.</span></p></div>
+        <div class="svc"><div class="svc-ic"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></svg></div>
           <h3><span class="ar">حملات إعلانات ميتا</span><span class="en">Meta Ads Campaigns</span></h3>
-          <p><span class="ar">إعلانات ممولة على فيسبوك وإنستغرام تستهدف عملاءكم الحقيقيين.</span><span class="en">Paid Facebook &amp; Instagram campaigns aimed at your real customers.</span></p></div>
-        <div class="svc rv"><div class="svc-ic">🎬</div>
-          <h3><span class="ar">الفيديو والريلز</span><span class="en">Videos &amp; Reels</span></h3>
-          <p><span class="ar">أفكار، سكربتات، تصوير ومونتاج لريلز تشد المشاهد من أول ثانية.</span><span class="en">Ideas, scripts, shooting and editing for reels that hook from second one.</span></p></div>
-        <div class="svc rv"><div class="svc-ic">🔍</div>
+          <p><span class="ar">استهداف دقيق لجمهوركم الحقيقي وتحسين مستمر للنتائج.</span><span class="en">Precise targeting and ongoing optimisation.</span></p></div>
+        <div class="svc"><div class="svc-ic"><svg class="ic" viewBox="0 0 24 24"><rect x="2.5" y="6" width="14" height="12" rx="2"/><path d="m16.5 10 5-3v10l-5-3"/></svg></div>
+          <h3><span class="ar">الفيديو والريلز</span><span class="en">Video &amp; Reels</span></h3>
+          <p><span class="ar">فكرة، سكربت، تصوير ومونتاج لمحتوى يشدّ من الثانية الأولى.</span><span class="en">Concept, script, shoot and edit — hooks from second one.</span></p></div>
+        <div class="svc"><div class="svc-ic"><svg class="ic" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></div>
           <h3><span class="ar">تحسين محركات البحث SEO</span><span class="en">SEO</span></h3>
-          <p><span class="ar">نساعدكم على الظهور في نتائج جوجل عندما يبحث العميل عنكم.</span><span class="en">Helping you show up on Google when customers search for you.</span></p></div>
-        <div class="svc rv"><div class="svc-ic">💌</div>
+          <p><span class="ar">ظهور أقوى في نتائج جوجل عندما يبحث العملاء عنكم.</span><span class="en">Stronger visibility when customers search on Google.</span></p></div>
+        <div class="svc"><div class="svc-ic"><svg class="ic" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6 8.5 7 8.5-7"/></svg></div>
           <h3><span class="ar">تصاميم ودعوات رقمية</span><span class="en">Digital Cards &amp; Invitations</span></h3>
-          <p><span class="ar">بطاقات ودعوات رقمية أنيقة للمناسبات، جاهزة للمشاركة.</span><span class="en">Elegant digital cards and invitations, ready to share.</span></p></div>
+          <p><span class="ar">بطاقات ودعوات رقمية أنيقة للمناسبات، جاهزة للمشاركة.</span><span class="en">Elegant digital invitations, ready to share.</span></p></div>
       </div>
     </div>
   </section>
 
-  <!-- PORTFOLIO -->
   <section id="work">
     <div class="wrap">
       <div class="sec-head rv">
-        <span class="sec-tag ar">أعمالنا</span><span class="sec-tag en">OUR WORK</span>
+        <div class="sec-tag ar">أعمالنا</div><div class="sec-tag en">SELECTED WORK</div>
         <h2><span class="ar">مشاريع نفتخر بها</span><span class="en">Projects we're proud of</span></h2>
-        <p><span class="ar">من إدارة الصفحات بالكامل إلى الإعلانات والتصاميم الخاصة.</span><span class="en">From full page management to ads and custom design.</span></p>
+        <p><span class="ar">إدارة صفحات بالكامل، إعلانات، وتصاميم خاصة.</span><span class="en">Full page management, advertising and custom design.</span></p>
       </div>
       <div class="pf-grid">
-        <!-- AWJ -->
         <article class="pf rv">
-          <div class="pf-media m-awj">
-            <img src="images/awj.jpg" alt="Awj" onerror="this.remove()">
-            <div class="ph"><span>👔</span><small class="ar">أوج للألبسة المهنية</small><small class="en">Awj Uniforms</small></div>
-          </div>
+          <div class="pf-media m1"><img src="images/awj.jpg" alt="Awj" onerror="this.remove()"><span class="mono ar-f">أوج</span></div>
           <div class="pf-body">
             <h3><span class="ar">أوج للألبسة المهنية</span><span class="en">Awj Professional Uniforms</span></h3>
             <p><span class="ar">إدارة كاملة للصفحة: محتوى، تصميم، ريلز وإعلانات ممولة لعلامة متخصصة بالزي المهني.</span><span class="en">Full page management — content, design, reels and paid ads for a uniform brand.</span></p>
             <div class="chips"><span class="chip ar">إدارة صفحة</span><span class="chip en">Page management</span><span class="chip ar">تصميم</span><span class="chip en">Design</span><span class="chip ar">إعلانات ممولة</span><span class="chip en">Paid ads</span></div>
             <div class="pf-links">
-              <a href="https://www.instagram.com/uniform_awg_uniform/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>Instagram</a>
-              <a href="#" class="fb-awj" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3c-2.8 0-4.5 1.8-4.5 4.6V11H7v4h2.5v7h4v-7H17l.5-4h-4V9c0-.6.4-1 1-1Z"/></svg>Facebook</a>
+              <a href="https://www.instagram.com/uniform_awg_uniform/" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg>Instagram</a>
+              <a href="#" class="fb-awj" target="_blank" rel="noopener"><svg><use href="#i-fb"/></svg>Facebook</a>
             </div>
           </div>
         </article>
 
-        <!-- STOP & SHOP -->
         <article class="pf rv">
-          <div class="pf-media m-sns">
-            <img src="images/stop-and-shop.jpg" alt="Stop & Shop" onerror="this.remove()">
-            <div class="ph"><span>🛒</span><small>Stop &amp; Shop</small></div>
-          </div>
+          <div class="pf-media m2"><img src="images/stop-and-shop.jpg" alt="Stop & Shop" onerror="this.remove()"><span class="mono">S&amp;S</span></div>
           <div class="pf-body">
             <h3><span class="ar">سوبرماركت ستوب اند شوب</span><span class="en">Stop &amp; Shop Supermarket</span></h3>
             <p><span class="ar">إدارة كاملة للصفحة مع إعلان فيديو: فكرة، سكربت، تخطيط لقطات، وتصاميم العروض.</span><span class="en">Full page management plus a video ad — concept, script, shot list and offer designs.</span></p>
@@ -393,12 +315,8 @@ footer .follow{font-weight:900;font-size:22px}
           </div>
         </article>
 
-        <!-- WEDDING INVITATION -->
         <article class="pf rv">
-          <div class="pf-media m-wed">
-            <img src="images/wedding.jpg" alt="Digital wedding invitation" onerror="this.remove()">
-            <div class="ph"><span>💍</span><small class="ar">دعوة زفاف رقمية</small><small class="en">Digital wedding invitation</small></div>
-          </div>
+          <div class="pf-media m3"><img src="images/wedding.jpg" alt="Digital wedding invitation" onerror="this.remove()"><span class="mono">Invitation</span></div>
           <div class="pf-body">
             <h3><span class="ar">دعوة زفاف رقمية</span><span class="en">Digital Wedding Invitation</span></h3>
             <p><span class="ar">دعوة رقمية أنيقة بتصميم خاص، سهلة المشاركة على واتساب والسوشال ميديا.</span><span class="en">A custom, elegant digital invitation — easy to share on WhatsApp and social media.</span></p>
@@ -406,12 +324,8 @@ footer .follow{font-weight:900;font-size:22px}
           </div>
         </article>
 
-        <!-- BRANDING -->
         <article class="pf rv">
-          <div class="pf-media m-brand">
-            <img src="images/branding.jpg" alt="Logos and designs" onerror="this.remove()">
-            <div class="ph"><span>✨</span><small class="ar">لوغوهات وتصاميم</small><small class="en">Logos &amp; designs</small></div>
-          </div>
+          <div class="pf-media m4"><img src="images/branding.jpg" alt="Logos and designs" onerror="this.remove()"><span class="mono">Branding</span></div>
           <div class="pf-body">
             <h3><span class="ar">لوغوهات، بطاقات وريلز</span><span class="en">Logos, Cards &amp; Reels</span></h3>
             <p><span class="ar">هويات بصرية وتصاميم وريلز لمشاريع متنوعة، لكل علامة شخصيتها الخاصة.</span><span class="en">Visual identities, designs and reels for many projects — each with its own personality.</span></p>
@@ -422,32 +336,28 @@ footer .follow{font-weight:900;font-size:22px}
     </div>
   </section>
 
-  <!-- PROCESS -->
-  <section id="process" style="padding-top:20px">
+  <section id="process" style="padding-top:24px">
     <div class="wrap">
       <div class="sec-head rv">
-        <span class="sec-tag ar">كيف نعمل</span><span class="sec-tag en">HOW WE WORK</span>
+        <div class="sec-tag ar">آلية العمل</div><div class="sec-tag en">HOW WE WORK</div>
         <h2><span class="ar">أربع خطوات واضحة</span><span class="en">Four clear steps</span></h2>
       </div>
-      <div class="steps">
-        <div class="step rv"><h3><span class="ar">نسمعكم</span><span class="en">We listen</span></h3><p><span class="ar">نفهم مشروعكم وجمهوركم وأهدافكم.</span><span class="en">We learn your business, audience and goals.</span></p></div>
-        <div class="step rv"><h3><span class="ar">نخطط</span><span class="en">We plan</span></h3><p><span class="ar">خطة محتوى وإعلانات مبنية على أهدافكم.</span><span class="en">A content &amp; ads plan built around your goals.</span></p></div>
-        <div class="step rv"><h3><span class="ar">ننفّذ</span><span class="en">We create</span></h3><p><span class="ar">تصاميم، ريلز وحملات بجودة عالية.</span><span class="en">Designs, reels and campaigns, done right.</span></p></div>
-        <div class="step rv"><h3><span class="ar">نقيس ونطوّر</span><span class="en">We measure</span></h3><p><span class="ar">نتابع النتائج ونحسّن باستمرار.</span><span class="en">We track results and keep improving.</span></p></div>
+      <div class="steps rv">
+        <div class="step"><h3><span class="ar">نفهم مشروعكم</span><span class="en">Discover</span></h3><p><span class="ar">نتعرف على علامتكم وجمهوركم وأهدافكم.</span><span class="en">We learn your brand, audience and goals.</span></p></div>
+        <div class="step"><h3><span class="ar">نضع الخطة</span><span class="en">Plan</span></h3><p><span class="ar">استراتيجية محتوى وإعلانات مبنية على أهدافكم.</span><span class="en">A content and ads strategy built around your goals.</span></p></div>
+        <div class="step"><h3><span class="ar">ننفّذ</span><span class="en">Create</span></h3><p><span class="ar">تصاميم وريلز وحملات بجودة عالية.</span><span class="en">High-quality designs, reels and campaigns.</span></p></div>
+        <div class="step"><h3><span class="ar">نقيس ونطوّر</span><span class="en">Measure</span></h3><p><span class="ar">نتابع النتائج ونحسّن باستمرار.</span><span class="en">We track results and keep improving.</span></p></div>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section id="contact" style="padding-top:20px">
+  <section id="contact" style="padding-top:24px">
     <div class="wrap">
       <div class="cta rv">
-        <h2><span class="ar">جاهزين نبدأ مع علامتكم؟</span><span class="en">Ready to grow your brand?</span></h2>
+        <svg class="cta-leaf"><use href="#leaf"/></svg>
+        <h2><span class="ar">جاهزون لنبدأ مع علامتكم؟</span><span class="en">Ready to grow your brand?</span></h2>
         <p><span class="ar">راسلونا على واتساب واحصلوا على استشارة مجانية لصفحتكم.</span><span class="en">Message us on WhatsApp for a free consultation on your page.</span></p>
-        <a class="btn wa-link" href="#" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.3-.5 0-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.1.3.7 1.1 1.4 1.8 1 .9 1.8 1.2 2.1 1.3.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.1Z"/></svg>
-          <span class="ar">تواصلوا معنا على واتساب</span><span class="en">Chat on WhatsApp</span>
-        </a>
+        <a class="btn wa-link" href="#" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg><span class="ar">تواصلوا معنا على واتساب</span><span class="en">Chat on WhatsApp</span></a>
       </div>
     </div>
   </section>
@@ -455,26 +365,25 @@ footer .follow{font-weight:900;font-size:22px}
 
 <footer>
   <div class="wrap">
+    <img class="f-logo" src="images/logo.png" alt="Noor Creative Marketing">
     <div class="follow"><span class="ar">تابعونا</span><span class="en">Follow us</span></div>
     <div class="socials">
-      <a href="https://www.instagram.com/noor.creative.marketing/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
-      <a href="https://www.youtube.com/@noorcreativemarketing" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8ZM9.8 15V9l5.2 3-5.2 3Z"/></svg></a>
-      <a href="#" class="fb-noor" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3c-2.8 0-4.5 1.8-4.5 4.6V11H7v4h2.5v7h4v-7H17l.5-4h-4V9c0-.6.4-1 1-1Z"/></svg></a>
-      <a href="#" class="wa-link" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.3-.5 0-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.1.3.7 1.1 1.4 1.8 1 .9 1.8 1.2 2.1 1.3.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.1Z"/></svg></a>
+      <a href="https://www.instagram.com/noor.creative.marketing/" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-ig"/></svg></a>
+      <a href="#" class="fb-noor" target="_blank" rel="noopener" aria-label="Facebook"><svg><use href="#i-fb"/></svg></a>
+      <a href="https://www.youtube.com/@noorcreativemarketing" target="_blank" rel="noopener" aria-label="YouTube"><svg><use href="#i-yt"/></svg></a>
+      <a href="#" class="wa-link" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#i-wa"/></svg></a>
     </div>
     <small>© <span id="yr"></span> Noor Creative Marketing — <span class="ar">عمّان، الأردن</span><span class="en">Amman, Jordan</span></small>
   </div>
 </footer>
 
-<a class="wa-float wa-link" href="#" target="_blank" rel="noopener" aria-label="WhatsApp">
-  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.3-.5 0-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.1.3.7 1.1 1.4 1.8 1 .9 1.8 1.2 2.1 1.3.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.1Z"/></svg>
-</a>
+<a class="wa-float wa-link" href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#i-wa"/></svg></a>
 
 <script>
-/* ===== Settings you can edit ===== */
-const WHATSAPP = "962788218638";
-const FACEBOOK_NOOR = "";   // ضعي رابط صفحة فيسبوك نور هنا
-const FACEBOOK_AWJ  = "";   // ضعي رابط صفحة فيسبوك أوج هنا
+/* ===== إعدادات يمكن تعديلها ===== */
+const WHATSAPP      = "962788218638";
+const FACEBOOK_NOOR = "https://www.facebook.com/share/1dFwd7qzp4/";
+const FACEBOOK_AWJ  = "https://www.facebook.com/share/18yCZS2t1d/";
 /* ================================= */
 
 const msg = { ar: "مرحباً، أرغب باستشارة تسويقية", en: "Hi, I'd like a marketing consultation" };
@@ -496,10 +405,9 @@ document.getElementById("langBtn").onclick = () => setLang(root.lang === "ar" ? 
 const nav = document.getElementById("navLinks");
 document.getElementById("burger").onclick = () => nav.classList.toggle("open");
 nav.querySelectorAll("a").forEach(a => a.onclick = () => nav.classList.remove("open"));
-
 document.getElementById("yr").textContent = new Date().getFullYear();
 
-const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: .12 });
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: .1 });
 document.querySelectorAll(".rv").forEach(el => io.observe(el));
 </script>
 </body>
