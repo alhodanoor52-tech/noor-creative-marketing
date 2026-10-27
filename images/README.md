@@ -8,3 +8,5 @@
 | `stop-and-shop.jpg` | بطاقة ستوب اند شوب |
 | `wedding.jpg` | بطاقة دعوة الزفاف |
 | `branding.jpg` | بطاقة اللوغوهات والتصاميم |
+| `marah-birds.jpg` | بطاقة مرح العصافير |
+| `awj-website.jpg` | بطاقة موقع أوج |
