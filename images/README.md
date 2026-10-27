@@ -10,3 +10,6 @@
 | `branding.jpg` | بطاقة اللوغوهات والتصاميم |
 | `marah-birds.jpg` | بطاقة مرح العصافير |
 | `awj-website.jpg` | بطاقة موقع أوج |
+| `logo-awj.png` | لوغو أوج في شريط العلامات |
+| `logo-stop-and-shop.png` | لوغو ستوب اند شوب |
+| `logo-marah-birds.png` | لوغو مرح العصافير |

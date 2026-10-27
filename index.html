@@ -85,6 +85,17 @@ html[lang="en"] .offer h3{font-family:"Cormorant Garamond",serif;font-size:30px;
 .offer .rule{height:1px;background:var(--line);margin:22px 0 16px}
 .offer small{color:var(--muted);font-weight:600;font-size:15px}
 
+
+/* Brands strip */
+.brands{padding:34px 0 40px;border-top:1px solid var(--line)}
+.brands-title{text-align:center;font-weight:800;font-size:15px;color:var(--muted);letter-spacing:.08em;margin-bottom:18px}
+.brands-row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px 40px}
+.brand{height:72px;min-width:120px;display:grid;place-items:center;position:relative}
+.brand img{position:absolute;inset:0;height:100%;width:100%;object-fit:contain;z-index:1;filter:grayscale(1);opacity:.75;transition:.25s}
+.brand:hover img{filter:none;opacity:1}
+.brand span{font-weight:900;font-size:22px;color:var(--ink-2);opacity:.7;white-space:nowrap}
+.brand span.lat{font-family:"Cormorant Garamond",serif;font-size:26px}
+
 /* Sections */
 section{padding:88px 0}
 .sec-head{max-width:700px;margin:0 auto 52px;text-align:center}
@@ -254,6 +265,18 @@ footer small{color:var(--muted);font-weight:600}
         <div class="rule"></div>
         <small><span class="ar">باقات مرنة حسب احتياج مشروعكم.</span><span class="en">Flexible packages tailored to your business.</span></small>
       </aside>
+    </div>
+  </section>
+
+
+  <section class="brands" aria-label="Brands">
+    <div class="wrap">
+      <div class="brands-title"><span class="ar">علامات عملنا معها</span><span class="en">BRANDS WE'VE WORKED WITH</span></div>
+      <div class="brands-row">
+        <div class="brand"><img src="images/logo-awj.png" alt="Awj" onerror="this.remove()"><span>أوج</span></div>
+        <div class="brand"><img src="images/logo-stop-and-shop.png" alt="Stop & Shop" onerror="this.remove()"><span class="lat">Stop &amp; Shop</span></div>
+        <div class="brand"><img src="images/logo-marah-birds.png" alt="Marah Birds" onerror="this.remove()"><span>مرح العصافير</span></div>
+      </div>
     </div>
   </section>
 
