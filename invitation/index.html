@@ -34,6 +34,8 @@ body{background:var(--ivory);color:var(--ink);font-family:var(--f-body);font-siz
   transition:opacity .9s ease, visibility .9s}
 .stage.gone{opacity:0;visibility:hidden}
 .stage-inner{display:grid;gap:28px;justify-items:center}
+.stage-open{font-family:var(--f-display);color:#fff;font-size:30px;margin:0 0 -14px;text-wrap:balance}
+.love{font-family:var(--f-display);font-size:26px;color:#fff;margin:16px 0 0}
 .stage-hint{font-family:var(--f-display);color:var(--gold-soft);font-size:24px;margin:0;text-wrap:balance}
 .stage-sub{font-family:var(--f-ui);color:#AFC0E0;font-size:14px;margin:-18px 0 0;letter-spacing:.02em}
 .envelope{position:relative;width:min(84vw,340px);aspect-ratio:1.42/1;cursor:pointer;perspective:1200px;border:0;padding:0;background:none}
@@ -163,6 +165,7 @@ footer p{margin:0}
   <!-- Envelope -->
   <div class="stage" id="stage">
     <div class="stage-inner">
+      <p class="stage-open">باسم خالق الحب نبدأ</p>
       <p class="stage-hint">لديكم دعوة خاصة</p>
       <button class="envelope" id="envelope" aria-label="افتح الدعوة">
         <span class="env-back"></span>
@@ -182,6 +185,7 @@ footer p{margin:0}
     <div class="wrap">
       <p class="bism">بسم الله الرحمن الرحيم</p>
       <p class="verse"><b>﴿</b> وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً <b>﴾</b></p>
+      <p class="love">باسم خالق الحب نبدأ</p>
       <p class="host">بكل الحب والفرح ندعوكم لمشاركتنا حفل زفاف</p>
       <h1 class="names">أحمد <i>&amp;</i> ليلى</h1>
       <div class="when">
@@ -317,6 +321,7 @@ footer p{margin:0}
     </div>
   </footer>
 
+  <audio id="song" src="music.mp3" loop preload="auto"></audio>
   <button class="music" id="music" aria-label="تشغيل الموسيقى" aria-pressed="false">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
   </button>
@@ -460,55 +465,12 @@ footer p{margin:0}
   redraw();
   if(document.fonts && document.fonts.ready) document.fonts.ready.then(redraw);
 
-  /* ---------- music box (generated, no file) ---------- */
-  var actx = null, master, delay, nextT = 0, step = 0, timer = null, playing = false;
-  var CH = [[60,64,67,72],[57,60,64,69],[53,57,60,65],[55,59,62,67]];
-  var MEL = [76,null,74,72,null,74,76,null, 72,null,71,69,null,71,72,null, 69,null,72,77,null,76,74,null, 74,null,71,67,null,71,74,null];
-  var PAT = [0,1,2,3,2,1,2,1];
-  var EIGHTH = 0.33;
-  function hz(m){ return 440*Math.pow(2,(m-69)/12); }
-  function note(m,t,dur,vol){
-    var o = actx.createOscillator(), o2 = actx.createOscillator(), g = actx.createGain(), g2 = actx.createGain();
-    o.type = "sine"; o2.type = "sine"; o.frequency.value = hz(m); o2.frequency.value = hz(m)*2.01; g2.gain.value = 0.18;
-    g.gain.setValueAtTime(0.0001,t); g.gain.exponentialRampToValueAtTime(vol,t+0.012); g.gain.exponentialRampToValueAtTime(0.0001,t+dur);
-    o.connect(g); o2.connect(g2); g2.connect(g); g.connect(master); g.connect(delay);
-    o.start(t); o2.start(t); o.stop(t+dur+0.05); o2.stop(t+dur+0.05);
-  }
-  function schedule(){
-    while(nextT < actx.currentTime + 0.7){
-      var bar = Math.floor(step/8) % 4, i = step % 8, ch = CH[bar];
-      if(i === 0) note(ch[0]-12, nextT, 2.6, 0.22);
-      note(ch[PAT[i]], nextT, 1.4, 0.10);
-      var mel = MEL[(step % 32)];
-      if(mel) note(mel, nextT, 1.8, 0.16);
-      nextT += EIGHTH; step++;
-    }
-  }
-  function initAudio(){
-    var AC = window.AudioContext || window.webkitAudioContext;
-    if(!AC) return false;
-    actx = new AC();
-    master = actx.createGain(); master.gain.value = 0.55; master.connect(actx.destination);
-    delay = actx.createDelay(); delay.delayTime.value = 0.29;
-    var fb = actx.createGain(); fb.gain.value = 0.32;
-    var lp = actx.createBiquadFilter(); lp.type = "lowpass"; lp.frequency.value = 2200;
-    var wet = actx.createGain(); wet.gain.value = 0.35;
-    delay.connect(lp); lp.connect(fb); fb.connect(delay); lp.connect(wet); wet.connect(master);
-    return true;
-  }
+  /* ---------- music (uploaded track) ---------- */
+  var song = $("song"), playing = false;
   function play(){
-    try{
-      if(!actx && !initAudio()) return;
-      actx.resume();
-      nextT = actx.currentTime + 0.1;
-      if(!timer) timer = setInterval(schedule,120);
-      playing = true; setBtn();
-    }catch(e){}
+    try{ var p = song.play(); if(p && p.catch) p.catch(function(){ playing = false; setBtn(); }); playing = true; setBtn(); }catch(e){}
   }
-  function pause(){
-    try{ clearInterval(timer); timer = null; if(actx) actx.suspend(); }catch(e){}
-    playing = false; setBtn();
-  }
+  function pause(){ try{ song.pause(); }catch(e){} playing = false; setBtn(); }
   function setBtn(){
     var b = $("music"); b.classList.toggle("playing",playing);
     b.setAttribute("aria-pressed",String(playing));
