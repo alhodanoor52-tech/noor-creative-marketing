@@ -90,9 +90,14 @@ html[lang="en"] .offer h3{font-family:"Cormorant Garamond",serif;font-size:30px;
 .brands{padding:34px 0 40px;border-top:1px solid var(--line)}
 .brands-title{text-align:center;font-weight:800;font-size:15px;color:var(--muted);letter-spacing:.08em;margin-bottom:18px}
 .brands-row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px 40px}
-.brand{height:72px;min-width:120px;display:grid;place-items:center;position:relative}
-.brand img{position:absolute;inset:0;height:100%;width:100%;object-fit:contain;z-index:1;filter:grayscale(1);opacity:.75;transition:.25s}
-.brand:hover img{filter:none;opacity:1}
+.brand{height:86px;width:86px;display:grid;place-items:center;position:relative}
+.brand.wide{width:190px}
+.brand img{position:absolute;inset:0;height:100%;width:100%;object-fit:contain;z-index:1;transition:transform .25s}
+.brand:hover img{transform:scale(1.06)}
+.brand img + span{display:none}
+.pf-media .plogo{position:static;width:58%;height:auto;max-height:70%;object-fit:contain;z-index:0;filter:drop-shadow(0 10px 18px rgba(0,0,0,.25))}
+.pf-media .plogo.round{width:40%;height:auto}
+.m-light{background:linear-gradient(135deg,#FFFFFF,#F1EBDE)}
 .brand span{font-weight:900;font-size:22px;color:var(--ink-2);opacity:.7;white-space:nowrap}
 .brand span.lat{font-family:"Cormorant Garamond",serif;font-size:26px}
 
@@ -273,7 +278,7 @@ footer small{color:var(--muted);font-weight:600}
     <div class="wrap">
       <div class="brands-title"><span class="ar">علامات عملنا معها</span><span class="en">BRANDS WE'VE WORKED WITH</span></div>
       <div class="brands-row">
-        <div class="brand"><img src="images/logo-awj.png" alt="Awj" onerror="this.remove()"><span>أوج</span></div>
+        <div class="brand wide"><img src="images/logo-awj.png" alt="Awj" onerror="this.remove()"><span>أوج</span></div>
         <div class="brand"><img src="images/logo-stop-and-shop.png" alt="Stop & Shop" onerror="this.remove()"><span class="lat">Stop &amp; Shop</span></div>
         <div class="brand"><img src="images/logo-marah-birds.png" alt="Marah Birds" onerror="this.remove()"><span>مرح العصافير</span></div>
       </div>
@@ -319,7 +324,7 @@ footer small{color:var(--muted);font-weight:600}
       </div>
       <div class="pf-grid">
         <article class="pf rv">
-          <div class="pf-media m1"><img src="images/awj.jpg" alt="Awj" onerror="this.remove()"><span class="mono ar-f">أوج</span></div>
+          <div class="pf-media m-light"><img src="images/awj.jpg" alt="Awj" onerror="this.remove()"><img class="plogo" src="images/logo-awj.png" alt=""></div>
           <div class="pf-body">
             <h3><span class="ar">أوج للألبسة المهنية</span><span class="en">Awj Professional Uniforms</span></h3>
             <p><span class="ar">إدارة كاملة لصفحتي إنستغرام وفيسبوك لعلامة زي مهني تستهدف الشركات في الأردن والسعودية: محتوى، تصميم، ريلز وإعلانات ممولة.</span><span class="en">Full Instagram &amp; Facebook management for a B2B uniform brand serving companies in Jordan and Saudi Arabia — content, design, reels and paid ads.</span></p>
@@ -332,7 +337,7 @@ footer small{color:var(--muted);font-weight:600}
         </article>
 
         <article class="pf rv">
-          <div class="pf-media m2"><img src="images/stop-and-shop.jpg" alt="Stop & Shop" onerror="this.remove()"><span class="mono">S&amp;S</span></div>
+          <div class="pf-media m2"><img src="images/stop-and-shop.jpg" alt="Stop & Shop" onerror="this.remove()"><img class="plogo round" src="images/logo-stop-and-shop.png" alt=""></div>
           <div class="pf-body">
             <h3><span class="ar">سوبرماركت ستوب اند شوب</span><span class="en">Stop &amp; Shop Supermarket</span></h3>
             <p><span class="ar">إدارة كاملة للصفحة: خطة محتوى أسبوعية تعرّف بالأقسام والمنتجات، ريلز مولّدة بالذكاء الاصطناعي، وإعلان فيديو بفكرة "الفاتورة المصدومة".</span><span class="en">Full page management — a weekly plan showcasing sections and products, AI-generated reels, and a "shocked receipt" video ad.</span></p>
@@ -344,7 +349,7 @@ footer small{color:var(--muted);font-weight:600}
         </article>
 
         <article class="pf rv">
-          <div class="pf-media m5"><img src="images/marah-birds.jpg" alt="Marah Birds" onerror="this.remove()"><span class="mono ar-f">مرح العصافير</span></div>
+          <div class="pf-media m5"><img src="images/marah-birds.jpg" alt="Marah Birds" onerror="this.remove()"><img class="plogo round" src="images/logo-marah-birds.png" alt=""></div>
           <div class="pf-body">
             <h3><span class="ar">قناة مرح العصافير</span><span class="en">Marah Birds Channel</span></h3>
             <p><span class="ar">قناة أناشيد وأغاني أطفال عربية بثلاث شخصيات كرتونية من العصافير، مع سلسلة "توتي"، على يوتيوب وفيسبوك وإنستغرام.</span><span class="en">An Arabic kids' songs channel starring three cartoon birds, with the "Toti" series — on YouTube, Facebook and Instagram.</span></p>
