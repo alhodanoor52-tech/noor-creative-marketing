@@ -132,7 +132,14 @@ html[lang="en"] .svc h3{font-family:var(--en-body);font-weight:600;font-size:20p
 .case-art .phone.in-case{position:relative;inset:auto;width:min(210px,52%);transform:rotate(-3deg);margin-block:8px -90px;align-self:start}
 .case-art .phone.in-case:hover{transform:rotate(0) translateY(-4px)}
 .case-art .word.ar-w{font-family:var(--ar-display);font-weight:800;font-size:40px;line-height:1.5}
-.a-awj{background:#F4F4F2;min-height:360px}
+.a-awj{background:#EDEDEA;min-height:380px}
+.fan{position:relative;width:100%;height:320px}
+.fan img{position:absolute;top:50%;left:50%;height:88%;width:auto;border-radius:14px;box-shadow:0 22px 40px -20px rgba(0,0,0,.5)}
+.fan img:nth-child(1){transform:translate(-50%,-50%) translateX(-46%) rotate(-7deg)}
+.fan img:nth-child(2){transform:translate(-50%,-50%);z-index:2}
+.fan img:nth-child(3){transform:translate(-50%,-50%) translateX(46%) rotate(7deg)}
+@media (max-width:520px){.fan{height:250px}.fan img:nth-child(1){transform:translate(-50%,-50%) translateX(-38%) rotate(-7deg)}.fan img:nth-child(3){transform:translate(-50%,-50%) translateX(38%) rotate(7deg)}}
+
 .case-art .badge-logo{position:absolute;z-index:3;bottom:16px;inset-inline-start:16px;width:118px;background:#fff;border-radius:14px;padding:10px 12px;box-shadow:0 10px 24px -12px rgba(0,0,0,.4)}
 .a-sns{background:#F7E9E6}
 .a-mb{background:var(--lav-tint)}
@@ -361,7 +368,7 @@ footer small{display:block;width:100%;margin-top:28px;padding-top:22px;border-to
 
       <div class="work">
         <article class="case">
-          <div class="case-art a-awj"><img class="shot" src="images/awj.jpg" alt="منتجات أوج: جاكيت شيف، سترة سلامة، جاكيت عمل" onerror="this.remove()"><img class="badge-logo" src="images/logo-awj.png" alt="أوج AWG"></div>
+          <div class="case-art a-awj"><div class="fan"><img src="images/awj/medical.jpg" alt="الزي الطبي من أوج"><img src="images/awj/hotel.jpg" alt="زي الفنادق من أوج"><img src="images/awj/industrial.jpg" alt="زي القطاع الصناعي من أوج"></div></div>
           <div class="case-body">
             <span class="case-kind"><span class="ar">إدارة صفحة كاملة</span><span class="en">Full page management</span></span>
             <h3 class="display"><span class="ar">أوج لتجارة الألبسة المهنية</span><span class="en">Awj Professional Uniforms</span></h3>
@@ -373,6 +380,32 @@ footer small{display:block;width:100%;margin-top:28px;padding-top:22px;border-to
             </div>
           </div>
         </article>
+
+        <div class="feed">
+          <div class="feed-head">
+            <h3 class="display"><span class="ar">من صفحة أوج</span><span class="en">From the Awj feed</span></h3>
+            <p><span class="ar">منشورات صممناها لكل قطاع: فنادق، طبي، صناعي، تخرج، مدارس ومطابخ. اضغطوا على أي تصميم لعرضه كاملاً.</span><span class="en">Posts we designed for each sector: hotels, medical, industrial, graduation, schools and kitchens. Tap any design to view it in full.</span></p>
+          </div>
+          <div class="feed-track">
+            <button class="post" type="button" data-full="images/awj/hotel.jpg"><img width="733" height="1100" style="aspect-ratio:733/1100" src="images/awj/hotel.jpg" alt="زي قطاع الفنادق" loading="lazy"></button>
+            <button class="post" type="button" data-full="images/awj/medical.jpg"><img width="733" height="1100" style="aspect-ratio:733/1100" src="images/awj/medical.jpg" alt="الزي الطبي" loading="lazy"></button>
+            <button class="post" type="button" data-full="images/awj/industrial.jpg"><img width="733" height="1100" style="aspect-ratio:733/1100" src="images/awj/industrial.jpg" alt="زي القطاع الصناعي" loading="lazy"></button>
+            <button class="post" type="button" data-full="images/awj/graduation.jpg"><img width="733" height="1100" style="aspect-ratio:733/1100" src="images/awj/graduation.jpg" alt="أرواب التخرج" loading="lazy"></button>
+            <button class="post" type="button" data-full="images/awj/school.jpg"><img width="733" height="1100" style="aspect-ratio:733/1100" src="images/awj/school.jpg" alt="الزي المدرسي" loading="lazy"></button>
+            <button class="post" type="button" data-full="images/awj/chef-order.jpg"><img width="733" height="1100" style="aspect-ratio:733/1100" src="images/awj/chef-order.jpg" alt="جاكيتات الشيف بألوان متعددة" loading="lazy"></button>
+            <button class="post" type="button" data-full="images/awj/workers-1.jpg"><img width="1100" height="1100" style="aspect-ratio:1100/1100" src="images/awj/workers-1.jpg" alt="زي عمال: سترة وقميص" loading="lazy"></button>
+            <button class="post" type="button" data-full="images/awj/workers-2.jpg"><img width="1100" height="1100" style="aspect-ratio:1100/1100" src="images/awj/workers-2.jpg" alt="جاكيت شتوي وجاكيت عمل" loading="lazy"></button>
+            <button class="post" type="button" data-full="images/awj/workers-3.jpg"><img width="1100" height="1100" style="aspect-ratio:1100/1100" src="images/awj/workers-3.jpg" alt="زي عمال بألوان مختلفة" loading="lazy"></button>
+            <button class="post" type="button" data-full="images/awj/workers-4.jpg"><img width="1100" height="1100" style="aspect-ratio:1100/1100" src="images/awj/workers-4.jpg" alt="قمصان عمل بشريط عاكس" loading="lazy"></button>
+            <button class="post" type="button" data-full="images/awj/chef.jpg"><img width="880" height="1100" style="aspect-ratio:880/1100" src="images/awj/chef.jpg" alt="شيف بزي أوج" loading="lazy"></button>
+            <button class="post" type="button" data-full="images/awj/fabrics.jpg"><img width="1100" height="1100" style="aspect-ratio:1100/1100" src="images/awj/fabrics.jpg" alt="أقمشة فاخرة" loading="lazy"></button>
+            <button class="post" type="button" data-full="images/awj/safety.jpg"><img width="880" height="1100" style="aspect-ratio:880/1100" src="images/awj/safety.jpg" alt="بدلات سلامة" loading="lazy"></button>
+            <button class="post" type="button" data-full="images/awj/logo-print.jpg"><img width="733" height="1100" style="aspect-ratio:733/1100" src="images/awj/logo-print.jpg" alt="طباعة اللوغو على زي العمل" loading="lazy"></button>
+            <button class="post" type="button" data-full="images/awj/chef-white.jpg"><img width="733" height="1100" style="aspect-ratio:733/1100" src="images/awj/chef-white.jpg" alt="جاكيت شيف أبيض" loading="lazy"></button>
+            <button class="post" type="button" data-full="images/awj/shirt.jpg"><img width="733" height="1100" style="aspect-ratio:733/1100" src="images/awj/shirt.jpg" alt="قميص بشعار الشركة" loading="lazy"></button>
+            <button class="post" type="button" data-full="images/awj/school-offer.jpg"><img width="1100" height="1100" style="aspect-ratio:1100/1100" src="images/awj/school-offer.jpg" alt="عروض العودة للمدارس" loading="lazy"></button>
+          </div>
+        </div>
 
         <article class="case">
           <div class="case-art a-sns"><div class="phone in-case reel"><video id="reel" src="images/sns/reel.mp4" poster="images/sns/reel-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="ريل ستوب اند شوب"></video><button class="sound" id="sound" type="button" aria-label="تشغيل الصوت" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9H4Z" fill="currentColor"/><path class="on" d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path class="off" d="m16 9 5 6m0-6-5 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div><img class="badge-logo round-badge" src="images/logo-stop-and-shop.png" alt="Stop & Shop"></div>
