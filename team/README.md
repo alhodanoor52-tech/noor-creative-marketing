@@ -99,7 +99,8 @@
 
 - [`agents/00-team-rules.md`](agents/00-team-rules.md) — تعليمات المشروع
 - [`agents/01-marketing-strategist.md`](agents/01-marketing-strategist.md) … [`agents/07-youtube-strategist.md`](agents/07-youtube-strategist.md) — دليل كل وكيل
-- [`clients/`](clients/) — ملفات العملاء الثلاثة (قوالب تُكمل)
+- [`clients/`](clients/) — ملفات العملاء الثلاثة
+- [`packages-draft.md`](packages-draft.md) — مسودة باقات الخدمة
 - [`templates/content-calendar.csv`](templates/content-calendar.csv) — قالب التقويم (يفتح في Numbers أو Google Sheets)
 - [`templates/monthly-report.md`](templates/monthly-report.md) — قالب التقرير الشهري
 - [`templates/iphone-shortcuts.md`](templates/iphone-shortcuts.md) — اختصارات الكيبورد
