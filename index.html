@@ -145,6 +145,8 @@ html[lang="en"] .svc h3{font-family:var(--en-body);font-weight:600;font-size:20p
 .a-mb{background:var(--lav-tint)}
 .a-web{background:var(--moss);place-items:start center;padding-top:40px}
 .a-inv{background:#14233F;place-items:start center;padding-top:40px}
+.a-ameed{background:radial-gradient(120% 90% at 50% 0%,#5A3418 0%,#24140A 60%,#140B05 100%);place-items:start center;padding-top:40px}
+.case-art .badge-logo.badge-plain{width:110px;padding:0;background:none;box-shadow:none;filter:drop-shadow(0 8px 16px rgba(0,0,0,.5))}
 .a-brand{background:var(--ink)}
 .case-body{padding:40px 44px;display:flex;flex-direction:column;gap:14px}
 .case-kind{font-weight:700;font-size:15px;color:var(--lav)}
@@ -439,6 +441,19 @@ footer small{display:block;width:100%;margin-top:28px;padding-top:22px;border-to
         </div>
 
         <article class="case">
+          <div class="case-art a-ameed"><div class="phone in-case reel"><video src="images/ameed/reel.mp4" poster="images/ameed/reel-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="إعلان بن العميد السينمائي"></video><button class="sound" type="button" aria-label="تشغيل الصوت" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9H4Z" fill="currentColor"/><path class="on" d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path class="off" d="m16 9 5 6m0-6-5 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div><img class="badge-logo badge-plain" src="images/logo-alameed.png" alt="بن العميد"></div>
+          <div class="case-body">
+            <span class="case-kind"><span class="ar">إعلان سينمائي بالذكاء الاصطناعي · فكرة تخيّلية</span><span class="en">AI cinematic ad · Concept</span></span>
+            <h3 class="display"><span class="ar">بن العميد: من أوّل حبّة لصباح عمّان</span><span class="en">Al Ameed Coffee: from the first bean to an Amman morning</span></h3>
+            <p><span class="ar">إعلان تخيّلي أنتجناه بالكامل بالذكاء الاصطناعي: تحميص البن، الهيل، الركوة اللي بتفور، وصباح عمّان، بمونتاج على الإيقاع وموسيقى أصلية ودخلة لوغو سينمائية. وتفاعلت معه صفحة بن العميد الرسمية.</span><span class="en">A concept ad made entirely with AI: roasting, cardamom, the coffee pot rising, and an Amman morning, cut to the beat with an original score and a cinematic logo reveal. Al Ameed's official page engaged with it.</span></p>
+            <ul><li class="ar">فيديو بالذكاء الاصطناعي</li><li class="en">AI video</li><li class="ar">مونتاج</li><li class="en">Editing</li><li class="ar">موسيقى أصلية</li><li class="en">Original score</li><li class="ar">موشن لوغو</li><li class="en">Logo motion</li></ul>
+            <div class="case-links">
+              <a href="https://www.instagram.com/reel/DfB67dAigcS/" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg><span class="ar">شاهدوه على إنستغرام</span><span class="en">Watch on Instagram</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="case">
           <div class="case-art a-inv"><a class="phone in-case" href="invitation/" target="_blank" rel="noopener"><img src="images/shot-invitation.jpg" alt="دعوة زفاف رقمية على الجوال"></a></div>
           <div class="case-body">
             <span class="case-kind"><span class="ar">دعوة رقمية تفاعلية</span><span class="en">Interactive digital invitation</span></span>
@@ -564,8 +579,10 @@ const menu = document.getElementById("menu"), burger = document.getElementById("
 burger.onclick = () => { const o = menu.classList.toggle("open"); burger.setAttribute("aria-expanded", o); };
 menu.querySelectorAll("a").forEach(a => a.onclick = () => { menu.classList.remove("open"); burger.setAttribute("aria-expanded", false); });
 document.getElementById("yr").textContent = new Date().getFullYear();
-const reel=document.getElementById("reel"), snd=document.getElementById("sound");
-if(reel&&snd){snd.onclick=()=>{reel.muted=!reel.muted; if(!reel.muted) reel.play().catch(()=>{}); snd.setAttribute("aria-pressed",String(!reel.muted)); snd.setAttribute("aria-label",reel.muted?"تشغيل الصوت":"كتم الصوت");};}
+const reels=[...document.querySelectorAll(".phone.reel")];
+reels.forEach(box=>{const v=box.querySelector("video"), b=box.querySelector(".sound"); if(!v||!b) return;
+  b.onclick=()=>{const unmute=v.muted; reels.forEach(o=>{const ov=o.querySelector("video"),ob=o.querySelector(".sound"); if(ov&&ob&&ov!==v){ov.muted=true;ob.setAttribute("aria-pressed","false");ob.setAttribute("aria-label","تشغيل الصوت");}});
+    v.muted=!unmute; if(unmute) v.play().catch(()=>{}); b.setAttribute("aria-pressed",String(unmute)); b.setAttribute("aria-label",unmute?"كتم الصوت":"تشغيل الصوت");};});
 const lbx=document.getElementById("lightbox"), lbImg=document.getElementById("lbImg");
 document.querySelectorAll(".post").forEach(b=>b.onclick=()=>{lbImg.src=b.dataset.full; lbImg.alt=b.querySelector("img").alt; if(lbx.showModal) lbx.showModal(); else window.open(b.dataset.full,"_blank");});
 document.getElementById("lbClose").onclick=()=>lbx.close();
