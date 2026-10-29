@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>أُمٌّ وأُمَّة | خطة الإطلاق</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="../images/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@600;800&family=IBM+Plex+Sans+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --white:#FFFFFF;
+  --mist:#F3F6EE;
+  --sage:#8A9C67;
+  --moss:#3E4A2E;
+  --ink:#2B2723;
+  --ink-soft:#5C574F;
+  --rule:#E2E6DA;
+  --lav:#8B78C2;
+  --lav-tint:#EFEBF8;
+  --ar-display:"Noto Kufi Arabic",sans-serif;
+  --ar-body:"IBM Plex Sans Arabic",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--white);color:var(--ink);font-family:var(--ar-body);font-size:18px;line-height:1.8;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--lav);outline-offset:3px;border-radius:6px}
+.wrap{width:min(960px,100% - 32px);margin-inline:auto}
+.display{font-family:var(--ar-display);font-weight:800}
+
+/* ---------- Hero ---------- */
+.hero{padding:56px 0 44px;background:radial-gradient(120% 90% at 80% 0%,#FFFFFF 0%,var(--mist) 60%,#E4EBD8 100%)}
+.tag{display:inline-block;font-size:14px;font-weight:700;color:var(--moss);background:#fff;border:1px solid var(--rule);border-radius:999px;padding:4px 14px}
+.hero h1{font-size:clamp(40px,8vw,64px);line-height:1.4;margin-top:16px}
+.hero .motto{font-size:clamp(19px,3vw,23px);color:var(--ink-soft);margin-top:6px}
+.ids{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:30px}
+.id{background:#fff;border:1px solid var(--rule);border-radius:18px;padding:14px 18px}
+.id small{display:block;font-size:14px;color:var(--ink-soft)}
+.id code{font:600 16px ui-monospace,Menlo,monospace;direction:ltr;display:block;text-align:right;word-break:break-all}
+
+/* ---------- Sections ---------- */
+section{padding:48px 0;border-top:1px solid var(--rule)}
+section.tint{background:var(--mist)}
+h2{font-size:clamp(26px,5vw,34px);line-height:1.4}
+.sub{color:var(--ink-soft);margin-top:6px;max-width:40em}
+
+/* ---------- Progress ---------- */
+.bar{height:10px;border-radius:999px;background:var(--rule);overflow:hidden;margin-top:22px}
+.bar i{display:block;height:100%;width:0;background:var(--sage);transition:width .3s}
+.count{font-size:15px;color:var(--ink-soft);margin-top:6px}
+
+/* ---------- Weeks ---------- */
+.weeks{display:grid;gap:18px;margin-top:26px}
+.week{background:#fff;border:1px solid var(--rule);border-radius:22px;padding:20px 22px}
+.week header{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.week h3{font-family:var(--ar-display);font-weight:800;font-size:21px}
+.week .when{font-size:14px;font-weight:700;color:var(--lav);background:var(--lav-tint);border-radius:999px;padding:2px 12px}
+.week ul{list-style:none;margin-top:12px}
+.week li{border-top:1px solid var(--rule)}
+.week li:first-child{border-top:0}
+.week label{display:flex;gap:12px;align-items:flex-start;padding:10px 0;cursor:pointer}
+.week input{flex:none;width:22px;height:22px;margin-top:5px;accent-color:var(--moss)}
+.week input:checked + span{color:var(--ink-soft);text-decoration:line-through}
+.week small{display:block;font-size:15px;color:var(--ink-soft);text-decoration:none}
+
+/* ---------- Tables ---------- */
+.scroll{overflow-x:auto;margin-top:24px;border:1px solid var(--rule);border-radius:18px;background:#fff}
+table{width:100%;border-collapse:collapse}
+th,td{text-align:right;padding:12px 16px;border-top:1px solid var(--rule);vertical-align:top}
+thead th{border-top:0;background:var(--moss);color:#fff;font-family:var(--ar-display);font-weight:600;font-size:16px}
+tbody th{font-weight:700;white-space:nowrap}
+td{color:var(--ink-soft)}
+
+/* ---------- Pillars & ideas ---------- */
+.pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:24px}
+.pillar{background:#fff;border-top:4px solid var(--sage);border-radius:0 0 18px 18px;padding:16px 18px}
+.pillar b{font-family:var(--ar-display);font-weight:800;font-size:18px;display:block}
+.pillar span{font-size:16px;color:var(--ink-soft)}
+.ideas{counter-reset:n;list-style:none;margin-top:22px;display:grid;gap:10px}
+.ideas li{counter-increment:n;display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--rule);border-radius:16px;padding:12px 16px}
+.ideas li::before{content:counter(n);font-family:var(--ar-display);font-weight:800;color:var(--lav);min-width:1.6em}
+.ideas small{display:block;font-size:14px;color:var(--sage);font-weight:700}
+
+.note{margin-top:22px;background:var(--lav-tint);border-radius:16px;padding:14px 18px;font-size:16px}
+footer{background:var(--ink);color:#c9c9cb;padding:24px 0;font-size:15px}
+footer a{color:#fff}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">مشروع جديد · خطة الإطلاق</span>
+    <h1 class="display">أُمٌّ وأُمَّة</h1>
+    <p class="motto">أمٌّ يعتزُّ الإسلامُ بأبنائها</p>
+    <div class="ids">
+      <div class="id"><small>اليوزر</small><code>umm.wa.umma</code></div>
+      <div class="id"><small>الإيميل</small><code>umm.wa.umma@gmail.com</code></div>
+      <div class="id"><small>بدائل اليوزر</small><code>ummwaumma · umm.and.umma</code></div>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2 class="display">جدول الإطلاق</h2>
+    <p class="sub">أربع أسابيع من الحجز للنشر. علّمي على كل خطوة لما تخلصيها، والعلامات بتنحفظ على جهازك.</p>
+    <div class="bar"><i id="bar"></i></div>
+    <p class="count" id="count"></p>
+
+    <div class="weeks">
+      <article class="week">
+        <header><h3>١. الحجز والتأسيس</h3><span class="when">الأسبوع الأول</span></header>
+        <ul>
+          <li><label><input type="checkbox" data-k="gmail"><span>إنشاء الإيميل على Gmail<small>"لاستخدامي الشخصي"، ثم "إنشاء عنوان Gmail خاص بك". إذا علق، جرّبي من تطبيق Gmail أو من الكمبيوتر.</small></span></label></li>
+          <li><label><input type="checkbox" data-k="2fa"><span>تفعيل التحقق بخطوتين وإيميل الاسترداد</span></label></li>
+          <li><label><input type="checkbox" data-k="ig"><span>حجز اليوزر على إنستغرام</span></label></li>
+          <li><label><input type="checkbox" data-k="tt"><span>حجز اليوزر على تيك توك</span></label></li>
+          <li><label><input type="checkbox" data-k="yt"><span>حجز اليوزر على يوتيوب</span></label></li>
+          <li><label><input type="checkbox" data-k="fb"><span>إنشاء صفحة فيسبوك</span></label></li>
+          <li><label><input type="checkbox" data-k="pro"><span>تحويل إنستغرام لحساب صانعة محتوى<small>مجاني، وبيعطيكي الإحصائيات وأفضل أوقات النشر.</small></span></label></li>
+        </ul>
+      </article>
+
+      <article class="week">
+        <header><h3>٢. الهوية البصرية</h3><span class="when">الأسبوع الثاني</span></header>
+        <ul>
+          <li><label><input type="checkbox" data-k="colors"><span>اختيار الألوان (٣ ألوان أساسية)</span></label></li>
+          <li><label><input type="checkbox" data-k="fonts"><span>اختيار الخط العربي للعناوين والنصوص</span></label></li>
+          <li><label><input type="checkbox" data-k="logo"><span>تصميم الشعار وصورة الحساب</span></label></li>
+          <li><label><input type="checkbox" data-k="tpl"><span>قوالب البوستات والريلز على Canva</span></label></li>
+          <li><label><input type="checkbox" data-k="hl"><span>أغلفة الهايلايت</span></label></li>
+        </ul>
+      </article>
+
+      <article class="week">
+        <header><h3>٣. تجهيز المحتوى</h3><span class="when">الأسبوع الثالث</span></header>
+        <ul>
+          <li><label><input type="checkbox" data-k="bio"><span>كتابة البايو</span></label></li>
+          <li><label><input type="checkbox" data-k="write10"><span>كتابة أول ١٠ بوستات</span></label></li>
+          <li><label><input type="checkbox" data-k="rec5"><span>تسجيل ٥ ريلز بجلسة وحدة<small>صوتك فوق لقطات من البيت، بدون ظهور.</small></span></label></li>
+          <li><label><input type="checkbox" data-k="grid"><span>تجهيز أول ٩ بوستات للشبكة</span></label></li>
+        </ul>
+      </article>
+
+      <article class="week">
+        <header><h3>٤. الإطلاق</h3><span class="when">الأسبوع الرابع</span></header>
+        <ul>
+          <li><label><input type="checkbox" data-k="launch"><span>نشر البوست التعريفي الأول</span></label></li>
+          <li><label><input type="checkbox" data-k="sched"><span>جدولة بوستات الأسبوع من Meta Business Suite</span></label></li>
+          <li><label><input type="checkbox" data-k="reply"><span>الرد على كل التعليقات بأول ساعة</span></label></li>
+          <li><label><input type="checkbox" data-k="review"><span>مراجعة الإحصائيات آخر الأسبوع</span></label></li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="tint">
+  <div class="wrap">
+    <h2 class="display">إيقاع النشر الأسبوعي</h2>
+    <p class="sub">٣ بوستات بالأسبوع بتكفي بالبداية. صوّري كل شي بيوم واحد وانشري على مدار الأسبوع.</p>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>اليوم</th><th>المهمة</th><th>نوع المحتوى</th></tr></thead>
+        <tbody>
+          <tr><th>السبت</th><td>تحضير: كتابة وتسجيل محتوى الأسبوع</td><td>بدون نشر</td></tr>
+          <tr><th>الأحد</th><td>نشر</td><td>ريل: "جرّبتها مع ولادي"</td></tr>
+          <tr><th>الثلاثاء</th><td>نشر</td><td>كاروسيل: آية أو حديث + تطبيق تربوي</td></tr>
+          <tr><th>الخميس</th><td>نشر</td><td>ريل أو خاطرة: "من كتاب…"</td></tr>
+          <tr><th>كل يوم</th><td>تفاعل ١٥ دقيقة</td><td>ستوري، ردود، استفتاء</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="display">أعمدة المحتوى</h2>
+    <div class="pillars">
+      <div class="pillar"><b>تربية بهدي النبوة</b><span>مواقف من السيرة وكيف نطبّقها اليوم</span></div>
+      <div class="pillar"><b>جرّبتها مع ولادي</b><span>فكرة، تطبيق، ونتيجة حقيقية</span></div>
+      <div class="pillar"><b>من كتاب…</b><span>فكرة وحدة من كتاب تربية بدقيقة</span></div>
+      <div class="pillar"><b>شو بحكي لابني لما…</b><span>جمل جاهزة للمواقف الصعبة</span></div>
+      <div class="pillar"><b>الأم نفسها</b><span>التعب، الصبر، والأجر</span></div>
+    </div>
+
+    <h2 class="display" style="margin-top:44px">أول ١٠ أفكار</h2>
+    <ol class="ideas">
+      <li><span>ليش "أُمٌّ وأُمَّة"؟ (البوست التعريفي)<small>تعريف</small></span></li>
+      <li><span>غيرة الأخ الكبير من المولود الجديد: شو زبط معي<small>جرّبتها مع ولادي</small></span></li>
+      <li><span>كيف كان النبي ﷺ يلاعب الحسن والحسين<small>تربية بهدي النبوة</small></span></li>
+      <li><span>٣ جمل بتوقف نوبة الغضب<small>شو بحكي لابني لما…</small></span></li>
+      <li><span>"فن التحدث مع الأطفال" بدقيقة<small>من كتاب…</small></span></li>
+      <li><span>صباح المدرسة بدون صراخ: روتيننا<small>جرّبتها مع ولادي</small></span></li>
+      <li><span>يوميات منتصف الليل: خاطرة أم مرضعة<small>الأم نفسها</small></span></li>
+      <li><span>كيف نعلّم الطفل الصلاة بحب مش بخوف<small>تربية بهدي النبوة</small></span></li>
+      <li><span>لما ابني يقول "ما بدي"<small>شو بحكي لابني لما…</small></span></li>
+      <li><span>"إخوة بلا تنافس": أهم فكرة فيه<small>من كتاب…</small></span></li>
+    </ol>
+
+    <p class="note">🔒 تذكير: لا وجوه، لا أسماء الولاد، ولا اسم المدرسة أو أماكن بتتكرر بالمحتوى.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">خطة داخلية من <a href="../">Noor Creative Marketing</a></div>
+</footer>
+
+<script>
+(function(){
+  var KEY="umm-wa-umma-plan";
+  var boxes=[].slice.call(document.querySelectorAll(".week input"));
+  var done={};
+  try{done=JSON.parse(localStorage.getItem(KEY))||{}}catch(e){}
+  function update(){
+    var n=boxes.filter(function(b){return b.checked}).length;
+    document.getElementById("bar").style.width=(n/boxes.length*100)+"%";
+    document.getElementById("count").textContent="خلصتي "+n+" من "+boxes.length+" خطوة";
+  }
+  boxes.forEach(function(b){
+    b.checked=!!done[b.dataset.k];
+    b.addEventListener("change",function(){
+      done[b.dataset.k]=b.checked;
+      try{localStorage.setItem(KEY,JSON.stringify(done))}catch(e){}
+      update();
+    });
+  });
+  update();
+})();
+</script>
+</body>
+</html>
