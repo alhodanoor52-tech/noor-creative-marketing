@@ -62,7 +62,7 @@
 
 1. تطبيق Claude ← **Projects** ← **Create project** ← الاسم: `فريق نور الرقمي`.
 2. في **Instructions**: لصق محتوى `agents/00-team-rules.md`.
-3. في **Files**: رفع ملفات `agents/01` إلى `agents/07` وملفات العملاء الثلاثة.
+3. في **Files**: رفع ملف واحد فقط: [`noor-team-knowledge.md`](noor-team-knowledge.md) (يجمع الوكلاء والعملاء والباقات والقوالب).
 4. إكمال الحقول المعلَّمة بـ `[يُكمل]` في ملفات العملاء (الباقة، جهة التواصل، الأولويات…). الأسهل: كتابة «حسابات: حدّث ملف AWG بهذه المعلومات…» فيعيد مدير الحسابات الملف كاملاً جاهزاً للاستبدال.
 5. **اختصارات الكيبورد** لتوفير الكتابة: الإعدادات ← عام ← لوحة المفاتيح ← استبدال النص. أمثلة جاهزة في [`templates/iphone-shortcuts.md`](templates/iphone-shortcuts.md).
 
@@ -97,6 +97,7 @@
 
 ## 4) محتويات المجلد
 
+- [`noor-team-knowledge.md`](noor-team-knowledge.md) — **الملف الموحّد للرفع في مشروع Claude**
 - [`agents/00-team-rules.md`](agents/00-team-rules.md) — تعليمات المشروع
 - [`agents/01-marketing-strategist.md`](agents/01-marketing-strategist.md) … [`agents/07-youtube-strategist.md`](agents/07-youtube-strategist.md) — دليل كل وكيل
 - [`clients/`](clients/) — ملفات العملاء الثلاثة
