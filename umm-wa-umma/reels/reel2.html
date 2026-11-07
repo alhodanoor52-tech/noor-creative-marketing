@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@700&family=Amiri:wght@400;700&family=Tajawal:wght@500;700;800&display=block" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#000}
+#stage{position:relative;width:1080px;height:1920px;overflow:hidden;color:#F6EFE4;font-family:Tajawal,sans-serif;
+  background:radial-gradient(90% 60% at 50% 42%,#25605C 0%,#1E4D4A 55%,#143634 100%)}
+.wm{position:absolute;left:50%;top:50%;width:1500px;height:1500px;margin:-750px 0 0 -750px;opacity:.05}
+.scene{position:absolute;left:90px;right:90px;top:0;bottom:0;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;opacity:0}
+.kick{font-size:44px;font-weight:800;color:#D4A964;letter-spacing:.01em}
+.big{font-family:"Aref Ruqaa";font-weight:700;font-size:128px;line-height:1.3;margin-top:30px}
+.quote{font-family:"Aref Ruqaa";font-weight:700;font-size:112px;line-height:1.35;margin-top:40px}
+.sub{font-family:Amiri;font-size:64px;line-height:1.7;margin-top:60px;color:#EDE4D3}
+.gold{color:#D4A964}
+.chip{display:inline-flex;align-items:center;gap:18px;background:rgba(201,137,122,.18);border:3px solid #C9897A;color:#F2C9BE;border-radius:999px;padding:14px 40px;font-size:46px;font-weight:800}
+.chip i{font-style:normal;color:#E7867A}
+.dots{position:absolute;bottom:430px;left:0;right:0;display:flex;justify-content:center;gap:22px;opacity:0}
+.dots b{width:22px;height:22px;border-radius:50%;background:rgba(246,239,228,.25)}
+.dots b.on{background:#D4A964}
+.sig{position:absolute;top:250px;left:0;right:0;display:flex;justify-content:center;align-items:center;gap:16px;font-family:"Aref Ruqaa";font-weight:700;font-size:50px;color:#F6EFE4;opacity:.9}
+.sig svg{width:70px;height:70px}
+.old{font-family:Amiri;font-weight:700;font-size:56px;color:#EBA597;text-decoration:line-through;text-decoration-thickness:4px;margin-bottom:36px}
+.chip.ok{background:rgba(212,169,100,.16);border-color:#D4A964;color:#F3DDB0}
+.chip.ok i{color:#D4A964}
+.save{margin-top:70px;background:#F6EFE4;color:#1E4D4A;border-radius:999px;padding:26px 60px;font-size:54px;font-weight:800}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <mask id="cm"><rect x="-10" y="-10" width="220" height="220" fill="#fff"/><circle cx="100" cy="72" r="74" fill="#000"/></mask>
+    <symbol id="mk" viewBox="0 0 200 200">
+      <circle cx="100" cy="100" r="82" mask="url(#cm)" fill="currentColor"/>
+      <path fill="#B98A4B" transform="translate(100 108) scale(.72) translate(-100 -135)" d="M100 100 l7.6 13.6 15.3 -2.6 -2.6 15.3 13.6 7.6 -13.6 7.6 2.6 15.3 -15.3 -2.6 -7.6 13.6 -7.6 -13.6 -15.3 2.6 2.6 -15.3 -13.6 -7.6 13.6 -7.6 -2.6 -15.3 15.3 2.6z"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div id="stage">
+  <svg class="wm" id="wm" style="color:#F6EFE4"><use href="#mk"/></svg>
+  <div class="sig"><svg style="color:#F6EFE4"><use href="#mk"/></svg>أُمٌّ وأُمَّة</div>
+
+  <div class="scene" id="s0">
+    <div class="kick">الجزء الثاني 🤍</div>
+    <div class="big">شو نقول<br><span class="gold">بدالهم؟</span></div>
+    <div class="sub">٣ جُمل بديلة… جرّبيها من اليوم</div>
+  </div>
+
+  <div class="scene" id="s1">
+    <div class="old">✕ «شوف أخوك كيف شاطر!»</div>
+    <div class="chip ok"><i>✓</i> قولي بدالها</div>
+    <div class="quote">«مبارح ما قدرت…<br><span class="gold">واليوم صرت تقدر!»</span></div>
+    <div class="sub">قارنيه بنفسه…<br>مش بأخوه.</div>
+  </div>
+
+  <div class="scene" id="s2">
+    <div class="old">✕ «ما في شي، لا تبكي!»</div>
+    <div class="chip ok"><i>✓</i> قولي بدالها</div>
+    <div class="quote">«زعلان؟ أنا جنبك…<br><span class="gold">احكيلي شو صار»</span></div>
+    <div class="sub" style="font-size:52px">حتى النبي ﷺ بكى وقال:<br><span class="gold">«إنّ العينَ تدمع، والقلبَ يحزن»</span><br><span style="font-size:36px;color:#C9BFAE">متفقٌ عليه</span></div>
+  </div>
+
+  <div class="scene" id="s3">
+    <div class="old">✕ «رح أتركك وأمشي!»</div>
+    <div class="chip ok"><i>✓</i> قولي بدالها</div>
+    <div class="quote">«أنا ما بتركك أبداً…<br><span class="gold">بس لازم نمشي هلّق»</span></div>
+    <div class="sub">«بدّك تمشي لحالك<br>ولا أحملك؟» 🤍</div>
+  </div>
+
+  <div class="scene" id="s4">
+    <div class="sub" style="margin-top:0;font-size:58px">قال ﷺ:</div>
+    <div class="big" style="font-size:120px;margin-top:10px">«والكلمةُ الطيّبة<br><span class="gold">صدقة»</span></div>
+    <div class="sub" style="font-size:38px;color:#C9BFAE;margin-top:20px">متفقٌ عليه</div>
+    <div class="save">تابعيني لتكبري معنا 🤍</div>
+  </div>
+
+  <div class="dots" id="dots"><b></b><b></b><b></b></div>
+</div>
+
+<script>
+// scene timings in seconds: [start, end]
+const T=[[0,4],[4,11.5],[11.5,20.5],[20.5,28],[28,34]];
+const IN=0.6, OUT=0.45;
+const ease=x=>1-Math.pow(1-Math.min(Math.max(x,0),1),3);
+window.DURATION=34;
+window.render=function(t){
+  T.forEach(([a,b],i)=>{
+    const el=document.getElementById('s'+i);
+    let o=0,y=60,sc=1;
+    if(t>=a&&t<b){
+      const pin=ease((t-a)/IN), pout=ease((b-t)/OUT);
+      o=Math.min(pin,pout); y=(1-pin)*60-(1-pout)*40; sc=0.97+0.03*pin;
+    }
+    el.style.opacity=o;
+    el.style.transform=`translateY(${y}px) scale(${sc})`;
+  });
+  // progress dots during scenes 1-3
+  const d=document.getElementById('dots');
+  const on=t>=T[1][0]&&t<T[3][1];
+  d.style.opacity=on?1:0;
+  [...d.children].forEach((b,i)=>b.className=(t>=T[i+1][0])?'on':'');
+  // slow watermark drift
+  document.getElementById('wm').style.transform=`rotate(${t*1.2}deg) scale(${1+t*0.004})`;
+};
+render(0);
+</script>
+</body>
+</html>
