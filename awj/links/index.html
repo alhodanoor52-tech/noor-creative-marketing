@@ -8,14 +8,16 @@
 <meta property="og:description" content="ألبسة مهنية وطبية لكل القطاعات، بتطريز وطباعة شعاركم">
 <style>*,*::before,*::after{box-sizing:border-box}body{margin:0}img{max-width:100%}</style>
 <title>روابط أوج</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;800&family=Tajawal:wght@400;500;700&display=swap">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800&family=Tajawal:wght@400;500;700&display=swap">
 <style>
 /* Layout: single centered column, brand wordmark on top, stacked tap-target buttons, contact block below */
 :root{
   --bg:#F3F3F4; --surface:#FFFFFF; --fg:#1E1F22; --muted:#6D6E71;
   --red:#BE1E2D; --red-ink:#FFFFFF; --line:#E0E0E3; --wa:#1F9D55;
-  --display:"Cairo","Tajawal",system-ui,sans-serif;
-  --body:"Tajawal","Cairo",system-ui,sans-serif;
+  --display:"Cairo","Tajawal",system-ui,"Segoe UI",Tahoma,sans-serif;
+  --body:"Tajawal","Cairo",system-ui,"Segoe UI",Tahoma,sans-serif;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
   --bg:#16171A; --surface:#212226; --fg:#F1F1F2; --muted:#A3A4A8;
@@ -23,7 +25,7 @@
 :root[data-theme="dark"]{
   --bg:#16171A; --surface:#212226; --fg:#F1F1F2; --muted:#A3A4A8;
   --red:#D9343F; --red-ink:#FFFFFF; --line:#33343A; --wa:#2DB868; color-scheme:dark}
-body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.6;
+body{font-kerning:normal;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.6;
   padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));}
 main{max-width:440px;margin:0 auto;padding-block:40px 32px;display:flex;flex-direction:column;gap:28px}
 header{text-align:center;display:flex;flex-direction:column;align-items:center;gap:6px}

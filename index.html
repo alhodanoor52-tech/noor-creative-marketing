@@ -14,7 +14,7 @@
 <meta name="theme-color" content="#FFFFFF">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@600;800&family=IBM+Plex+Sans+Arabic:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --white:#FFFFFF;
@@ -26,14 +26,14 @@
   --rule:#E2E6DA;
   --lav:#8B78C2;       /* brand lavender, used sparingly */
   --lav-tint:#EFEBF8;
-  --ar-display:"Noto Kufi Arabic",sans-serif;
-  --ar-body:"IBM Plex Sans Arabic",sans-serif;
-  --en-display:"Cormorant Garamond",serif;
-  --en-body:"IBM Plex Sans",sans-serif;
+  --ar-display:"Noto Kufi Arabic","IBM Plex Sans Arabic",system-ui,"Segoe UI",Tahoma,sans-serif;
+  --ar-body:"IBM Plex Sans Arabic",system-ui,"Segoe UI",Tahoma,sans-serif;
+  --en-display:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --en-body:"IBM Plex Sans",system-ui,"Segoe UI",Tahoma,sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:var(--white);color:var(--ink);font-family:var(--ar-body);font-size:19px;line-height:1.8;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{font-kerning:normal;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;background:var(--white);color:var(--ink);font-family:var(--ar-body);font-size:19px;line-height:1.8;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 html[lang="en"] body{font-family:var(--en-body);font-size:18px;line-height:1.7}
 html[lang="ar"] .en,html[lang="en"] .ar{display:none!important}
 a{color:inherit;text-decoration:none}
